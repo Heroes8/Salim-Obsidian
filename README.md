@@ -39,7 +39,7 @@
 
 [[Comment synchro ce Vault Obsidian sur votre repo GH]]
 [[Exemple - GITHUB create repo and sync locally (Windows)]]
-
+Cf : [ici si tu es si ton navigateur](https://github.com/goHuuu/TemplateObsidian/blob/ecfdc9b3b9a0f153fde1872d49d372074394a6e5/00%20%F0%9F%93%9AKnowledge/01%20%F0%9F%97%83%EF%B8%8Froot%20library/01%20%F0%9F%A4%96Proc%C3%A9dures/Comment%20synchro%20ce%20Vault%20Obsidian%20sur%20votre%20repo%20GH.md)
 ## Moi : Tu veux voir comment je l'utilise ?
 
 - Tout le contenu de mon Vault est récupérable dans le repo suivant :
