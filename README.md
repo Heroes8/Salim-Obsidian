@@ -36,6 +36,8 @@
 | 99 🖼️Image          | Dossier d'import d'image en tout genre qui sont coller dans les notes                             |
 
 ### Comment j'utilise GitHub ?
+
+[[Comment synchro ce Vault Obsidian sur votre repo GH]]
 [[Exemple - GITHUB create repo and sync locally (Windows)]]
 
 ## Moi : Tu veux voir comment je l'utilise ?
