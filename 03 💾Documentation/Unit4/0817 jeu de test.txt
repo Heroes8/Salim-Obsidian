@@ -1,0 +1,289 @@
+des programmes différents à chaque fois
+**étudiant particulier : en 10 fois avec acompte mais sans règlement
+**étudiant en 2 fois avec acompte
+**étudiant en 1 fois avec acompte (avec Excelerator)
+
+**étudiant qui n'a pas versé d'acompte (sans Excelerator) : pas de finalisation de réinscription
+
+le cas des bourses HumanIT
+bourse HumanIT avec versement complet de la scolarité, qui doit être remonté depuis Unit4
+
+pour certains étudiants : générer une proforma (édition dans l'espace étudiant)
+proforma avec IRF
+avant de lancer la facturation
+
+étudiant qui n'a pas payé d'acompte, si coché la case IRF
+
+test de versement et prélèvement
+
+édition brouillon (étape de facturation mais sans la vraie compta)
+
+facture réelle comptabilisée (complétion du fichier)
+avec remplissage de l'IRF Verif Fact [[ quand on fera l'automatisation ]] : il faudra cocher
+
+vérification des groupes de frais
+vérification des cohérernces de versements
+vérification de l'adresse
+
+Périmètre : ceux qui ont versé des acompte
+Ce lot de facturation sera lancé IRF Vérif (cf. Fact Auto cf. vidéo de SGIL)
+
+facture visible / non visible
+MyEFREI n'est pas connecté à la PREPROD
+mais on peut comparer la proforma et la facture
+
+++ rajout d'une ligne complémentaire 
+
+
+étudiant dont on ne remonte pas encore les acomptes
+> facturation manuelle
+>> et du coup ça génère un avoir
+
+on fait plutôt une facture de régulation :
+pour vérifier que 
+
+=================
+
+demain matin, processus de test, non pas en L2 => L2-Bordeaux
+> génération d'un avoir total
+
+les frais d'inscription vont avoir un avoir
+on va récupérer l'acompte dans la facture précédente
+
+il faut réécrire l'acompte
+
+avoir partiel : changement de 2x en 10x
+1. facture en complément, l'acompte ne doit pas être pris en compte
+la facture doit prendre en compte le nouvel échéancier
+les frais d'inscription ne changent 
+les frais de scolarité changent
+
+la facture suivante annule les frais de scolarité et rajoute de nouveaux frais de scolarité
+
+=========================
+>> A FAIRE EN PRODUCTION
+>> IsVisible à remettre en prod ainsi que les noms des rapports 
+>> Menu Facturation
+
+
+>> Menu Edition / copie de la facture
+
+> report_file1
+> vouch_date_f et t
+> +IsVisible
+
+> recopier le 
+
+*
+=================
+
+jeu de test
+
+/****** Script de la commande SelectTopNRows à partir de SSMS  ******/
+SELECT [client_name]
+      ,[SOC_CODE_TIERS]
+      ,[study_cycle]
+      ,[apar_id]
+      ,[apar_name]
+      ,[operation_type]
+      ,[account]
+      ,[account_name]
+      ,[due_date]
+      ,[voucher_no]
+      ,[invoice_no]
+      ,[description]
+      ,[ext_inv_ref]
+      ,[voucher_type]
+      ,[match_code]
+      ,[amount]
+      ,[voucher_date]
+      ,[libelle]
+      ,[reason]
+      ,[season]
+      ,[reason_valid]
+  FROM [DWH_MYREP_BE].[dbo].[agr_compte_etudiant] mytable
+  WHERE mytable.study_cycle = '2021 - 2022'
+  AND mytable.invoice_no LIKE '%22-23%'
+  --AND mytable.voucher_date BETWEEN '01/01/2022' AND GETDATE()
+  AND mytable.apar_id NOT LIKE 'EATTENTE'
+  --AND mytable.apar_id LIKE '20211541'
+  AND mytable.account_name NOT LIKE '%CFA%'
+  --AND mytable.description LIKE '%2022%'
+  --ORDER BY mytable.description ASC
+  ORDER BY mytable.apar_id ASC
+  
+  ==============
+  
+  Param niveau de log = Log détaillé
+  Table paramètre temporaire
+  
+  > afficher compte rendu
+  
+  10:23:31 Header table is named 'HU4PREPRODEM05001432545' <-- 14 !!
+10:23:31 Detail table is named 'HU4PREPRODEM05001532545' <--- 15 !!
+
+dev : http://192.168.132.128/BusinessWorld-reportengine/Service.asmx
+preprod : http://192.168.132.128/BusinessWorld-reportengine-u4preprod/Service.asmx
+
+instead use :
+	agr.UseParameter "st_head_table", "HU4PREPRODEM05001432545"
+	agr.UseParameter "st_det_table", "HU4PREPRODEM05001532545"
+	
+	
+===================================
+
+Outils / Finance / Mettre à jour le client 
+4- Règlement
+ModeRmt 
+
+>> vérifier le EM_DUE_CHECK (date d'échéances non remontées)
+frais d'inscription 1/09
+frais de scolarité 10/09
+
+
+-----
+vérification présence dans les doc  de l'étudiant
+
+
+mise à jour des groupes de frais, sur l'étudiant, sur l'objectif pédagogique associé à l'étudiant (epi)
+Cocher mise à jour des session sur fenêtre 2- créations
+
+C = extourne / annule des lignes déjà faite
+
+-------------
+
+Finance / Dossier Financier Etudiant
+> tous les éléments de comptes
+écritures comptables
+
+------------
+
+saisir une bourse :
+
+Outils > Finance > Saisie manuelle de facture
+
+bourse est déduite sur les frais de scolarité
+
+>>>> problème d'imputation comptabilité 
+
+-------------
+
+>> repérer frais de scolarité mélangé avec frais d'inscription
+scolarité 4080 dont 1500 étaient en fait des frais INSCR
+
+>> caler un point avec Angelo pour surveiller
+
+** si SCOLA sans frais d'inscription
+
+se connecter à la prod avec Angelo,
+autre id : http://asterix/BusinessWorld-reportengine/Service.asmx
+
+Preprod : http://192.168.132.128/BusinessWorld-reportengine-u4preprod/Service.asmx
+
+--------------------
+
+détail = requête que l'on a fait l'autre jour
+
+préparer pour la réunion d'après le browser avec la requête sur les étudiants en EATTENTE
+
+si CFA => montant de 500 (amount)
+voucher_type : 500 (normalement ?) = SOCGEN
+510 = caisse d'épargne
+
+----------
+
+remontrer les frais
+details : data = 20170015 yes => on l'oublie
+20180122 = utilisation pour faire le test
+
+refaire le même objectif pédagogique en preprod
+
+yes sur la ligne
+envoi vers agresso (charger feuille en cours)
+comptabiliser feuille encours => lancement de GL07 (double click = rapport PAS de ERROR) 
+
+il faut relancer le TPS
+business World On: Manager
+
+relancer le brouillon
+
+====================
+
+20220603	ETIEVANT, SEVERIN ALAINDANIEL	13/01/2004	510	41911000	1000	1000,00	VIRT RECU	SCOLA	22-23
+20220603	ETIEVANT, SEVERIN ALAINDANIEL	13/01/2004	510	41911000	1000	1000,00	VIRT RECU	SCOLA	22-23
+20220603	ETIEVANT, SEVERIN ALAINDANIEL	13/01/2004	510	41911000	1000	1000,00	VIRT RECU	SCOLA	22-23
+
+on va changer une ligne en 23-24 pour qu'elle ne soit pas visible de Sage
+1000 INSCRI
+500 INSCRI } = ventilation
+500 SCOLA  }
+1000 SCOLA -> 22-24 pour faire le test
+pour respecter la compta
+
+pour vérifier si c'est remonté en versement complémentaire avant facturation
+
+============
+
+si aucun intérêt à remontrer l'acompte vers Agresso
+c'est au niveau de la facturation
+
+bloquer qui n'a pas payé ses frais de scolarité
+bloquer l'acompte pour rester en comptabilité
+ou bien il faut le laisser passer, mais ne pas éditer la facture
+
+au moment de la facturation, lors de la génération des lots
+
+décocher en facturation
+on refait la moulinette, suppression de l'acompte et passage à un autre
+
+
+>> modifier le texte pour l'IRF
+
+faire une session avec des imprim écran
+
+--------------
+
+Suivi Facturation CAC : vérifier si les L2 ont bien les bons groupes de frais, L1 ...
+Etat de contrôle pour la facturation
+Numéro d'étudiant avec INE, RIB
+
+Suivi Facturation CAC : suivi du chiffre d'affaire
+
+Factures -export SAGE : on donne le premier numéro de facture, et on a toutes les factures qui apparaissent.
+
+on supprime les lignes déjà ... et on fait l'intégration du reste
+
+------------
+
+Echéancier :
+comment est-il remonté ?
+passage de 2x à 10x (pour Pierre)
+
+bascule de prélèvement vers virement : PREL > V
+avec les échéances et les 
+419 : 9300 contre partie à -9300
+
+G = général
+A = analytique
+
+===========
+
+La facturation a lieu le 29 août
+
+Faire des tests, mercredi et jeudi prochain
+intégration des bourses en production, il a eu le GO de Sébastien,
+
+les bourses d'immersion ne sont pas liées à la facturation
+
+19 : facturation de l'immersion
+
+les 1000 étudiants : 2 jours à faire avec la ventilation inscription / scolarité
+mercredi après-midi 
+
+--------------
+
+>> tester les changements de groupe de frais
+
+==================
+
+faire un point avec Sébastien

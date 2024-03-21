@@ -1,0 +1,82 @@
+PO Juan-Manuel, sur le produit MyEFREI
+Damien Barone, responsable développement MyEFREI, us facturation
+
+3 espaces différents
+Candidat
+Etudiant
+Staff
+
+Récupération des factures
+
+3 US :
+- rajouter un espace en affichage tableau de l'espace candidat
+
+Candidature effectuée et validée
+3 étapes
+Etape 1 remplissage par le candidat
+Etape 2 : régler frais d'inscription
+vérficiation réception des docupments et validation
+Etape 3 = fin d'inscription jusqu'à ce qu'il devienne étudiant
+
+Onglet pour récupérer les documents, faire le lien depuis la fiche candidat, vers l'espace
+
+Restitution :
+espace candidat
+
+import depuis Unit4, puis apparition d'un tableau avec la facture de l'étudiants
+
+connexion avec changement de valeur dans Unit4 : la valeur a été récupérée.
+
+IsVisible
+
+il a un numéro étudiant qui est associé au candidat
+sur son espace, on voit la facture affichée
+
+propriété IsVisible = Non
+
+si on met à jour d'anciens documents, si on clique sur OK, ça affiche les anciens documents
+
+** peut être utilisé pour afficher des anciennes factures
+
+cela n'affiche que les factures
+
+validation de cette première US
+
+>> dans le futur sur cette première US : verrouiller sur l'année en cours de la requête : facture de l'année en cours
+
+nouvelle candidature = nouveau numéro candidat
+rapprochement lorsque traitement ?
+
+>> Didier demande à Sarah pour voir la partie facture
+
+le bloc en bleu est affiché uniquement si il a été enregistré dans unit4 : affichage si candidat a un numéro étudiant
+** c'est le travail des admissions
+
+requête qui prend le dessus ?
+
+les proforma se déclenchent automatiquement à partir d'octobre
+
+pour l'instant, c'est à la main
+
+---------
+
+Concernant l'espace candidat
+Pas OK sur les proforma ?
+
+----------
+
+Concernant la fiche etudiant sur l'espace staff 
+
+US3 : OK
+
+----------
+
+** modification de l'injection des dates sous la forme d'un cast propre car les dates FR ou US (20220826) sont pas pris en charge de la même façon en prod
+
+** gare à la limite sur le nombre de caractères
+
+>> 30180001 : vérifier pourquoi la proformat n'a pas été affichée
+
+jusqu'au 1er septembre : il n'a pas besoin de voir la facture
+
+

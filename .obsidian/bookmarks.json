@@ -1,0 +1,197 @@
+{
+  "items": [
+    {
+      "type": "group",
+      "ctime": 1691681834855,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1691682379595,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Cisco_Firewall_Benchmark_v4.1.0.pdf",
+          "title": "Cisco Firewall"
+        },
+        {
+          "type": "file",
+          "ctime": 1691681852673,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS GitHub Benchmark v1.0.0 PDF.pdf",
+          "title": "Github"
+        },
+        {
+          "type": "file",
+          "ctime": 1691681883812,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_CentOS_Linux_8_Benchmark_v2.0.0.pdf",
+          "title": "CentOS"
+        },
+        {
+          "type": "file",
+          "ctime": 1691681931943,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Cisco_ASA_9.x_Firewall_Benchmark_v1.0.0.pdf",
+          "title": "ASA"
+        },
+        {
+          "type": "file",
+          "ctime": 1691681949502,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Debian_Linux_10_Benchmark_v2.0.0.pdf",
+          "title": "Debian 10"
+        },
+        {
+          "type": "file",
+          "ctime": 1691682023038,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Microsoft_Intune_for_Windows_11_Benchmark_v1.0.0.pdf",
+          "title": "Windows 11"
+        },
+        {
+          "type": "file",
+          "ctime": 1691682067680,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Microsoft_Office_Enterprise_Benchmark_v1.0.0.pdf",
+          "title": "Office Enterprise"
+        },
+        {
+          "type": "file",
+          "ctime": 1691682090194,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Microsoft_SharePoint_2019_Benchmark_v1.0.0.pdf",
+          "title": "Sharepoint 2019"
+        },
+        {
+          "type": "file",
+          "ctime": 1691682140128,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Microsoft_SQL_Server_2019_Benchmark_v1.3.0.pdf",
+          "title": "MS MySQL 2019"
+        },
+        {
+          "type": "file",
+          "ctime": 1691682166992,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Microsoft_Windows_Server_2019_Benchmark_v2.0.0.pdf",
+          "title": "Windows server 2019 "
+        },
+        {
+          "type": "file",
+          "ctime": 1691682201150,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_MIT_Kerberos_1.10_Benchmark_v1.0.0.pdf",
+          "title": "Kerberos"
+        },
+        {
+          "type": "file",
+          "ctime": 1691682213254,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_NGINX_Benchmark_v2.0.1.pdf",
+          "title": "Nginx"
+        },
+        {
+          "type": "file",
+          "ctime": 1691682227846,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_pfSense_Firewall_Benchmark_v1.1.0.pdf",
+          "title": "pfsense"
+        },
+        {
+          "type": "file",
+          "ctime": 1691682245705,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_PostgreSQL_15_Benchmark_v1.0.0.pdf",
+          "title": "PostgreSQL"
+        },
+        {
+          "type": "file",
+          "ctime": 1691682266600,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Red_Hat_Enterprise_Linux_9_Benchmark_v1.0.0.pdf",
+          "title": "RedHat 9"
+        },
+        {
+          "type": "file",
+          "ctime": 1691682290261,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Ubuntu_Linux_22.04_LTS_Benchmark_v1.0.0.pdf",
+          "title": "Ubuntu 22.04"
+        },
+        {
+          "type": "file",
+          "ctime": 1691682308568,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_VMWARE_ESXi_7.0_Benchmark_V1.2.0_PDF.pdf",
+          "title": "ESXi 7"
+        },
+        {
+          "type": "file",
+          "ctime": 1691682330434,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Apple_macOS_10.15_Catalina_Benchmark_v3.0.0.pdf",
+          "title": "MacOS 10.15"
+        },
+        {
+          "type": "file",
+          "ctime": 1691682353100,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS Docker Benchmark v1.5.0 PDF.pdf",
+          "title": "Docker"
+        },
+        {
+          "type": "file",
+          "ctime": 1691682391046,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Cisco_IOS_17.x_Benchmark_v1.0.0 (1).pdf",
+          "title": "Cisco IOS"
+        },
+        {
+          "type": "file",
+          "ctime": 1691682405462,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Microsoft_IIS_10_Benchmark_v1.2.1.pdf",
+          "title": "MS IIS 10"
+        },
+        {
+          "type": "file",
+          "ctime": 1691684427570,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS Kubernetes Benchmark v1.7.0. PDF.pdf",
+          "title": "Kubernetes"
+        },
+        {
+          "type": "file",
+          "ctime": 1691684444928,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Azure_Compute_Microsoft_Windows_Server_2022_Benchmark_v1.0.0.pdf",
+          "title": "Azure"
+        },
+        {
+          "type": "file",
+          "ctime": 1691684460818,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Cisco_IOS_17.x_Benchmark_v2.0.0.pdf",
+          "title": "Cisco IOS 7"
+        },
+        {
+          "type": "file",
+          "ctime": 1691684486389,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Google_Cloud_Platform_Foundation_Benchmark_v2.0.0-1.pdf",
+          "title": "GP"
+        },
+        {
+          "type": "file",
+          "ctime": 1691684500188,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Microsoft_Azure_Foundations_Benchmark_v2.0.0.pdf",
+          "title": "Azure"
+        },
+        {
+          "type": "file",
+          "ctime": 1691684587006,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Cisco_NX-OS_Benchmark_v1.0.0 PDF.pdf",
+          "title": "Cisco NX OS"
+        },
+        {
+          "type": "file",
+          "ctime": 1691684709421,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Amazon_Web_Services_Foundations_Benchmark_v2.0.0.pdf",
+          "title": "AWS"
+        },
+        {
+          "type": "file",
+          "ctime": 1691684730900,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Amazon_Web_Services_Three-tier_Web_Architecture_Benchmark_v1.0.0.pdf",
+          "title": "AWS 3 tier Web arch"
+        },
+        {
+          "type": "file",
+          "ctime": 1691684756070,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_AKS_Optimized_Azure_Linux_Benchmark_v1.0.0.pdf",
+          "title": "AWS AKS"
+        },
+        {
+          "type": "file",
+          "ctime": 1691684787850,
+          "path": "03 💾Documentation/CIS Benchmarks/CIS_Cisco_Wireless_LAN_Controller_7_Benchmark_v1.1.0.pdf",
+          "title": "Cisco Wifi controller"
+        }
+      ],
+      "title": "CIS benchmarks to be read"
+    }
+  ]
+}

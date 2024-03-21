@@ -1,0 +1,162 @@
+Sage 100
+
+Se définir des créneaux de travail
+
+Tests d'évolution des éléments de facturation
+
+Premiers éléments : facture proforma, modifier l'édition
+1/ contrats CDDU contrat d'usage (finaliser ce point)
+- prise en main de l'outil
+
+Production de l'avenant, via l'ERP
+
+Extension du projet sur la manière dont on va pouvoir dématérialiser des tags spécifiques pour l'envoyer chez Docusign (pour dématérialiser la signature de documents) avec réenregistrement.
+
+pierre administratif et financier
+
+travail sur le proforma
+monter en compétence sur Agresso
+
+validation process dans l'ERP
+formalisé à l'écrit
+partagé avec les parties prenantes (admission)
+
+Les bourses = secteur très important
+
+fin août à septembre : au même niveau Sébastien Gilles, référent ERP
+Montée en compétence à 3, sur le process mis à jour pour réaliser la facturation
+
+documentation de factu
+proforma
+
+et le fichier excel pour faire les vérficiations et préparation
+Accelerator = mode op, qui retire les données d'accomptes dans la compta, pour les mettre dans l'ERP, pour faire le proforma et la facturation
+2e automatisme qui est
+
+Proforma avec uniquement les accomptes, pas besoin de vérification
+Si accompte est rentré = il y a une versement
+et si facturation, il faut faire la vérificaftion
+
+Contrôle à tout niveau en 1 pour 1.
+"On ne veut pas mettre de versement complémentaire (dans la case versement accompte"
+
+complément pour s'affranchir, est échelonné
+imbroglio,
+
+seul les accomptes sont matérialisés
+ce n'est pas un suivi de règlement,
+
+automatisation de 9 à 10 contrôles
+
+donner le code VBA pour récupérer les requêtes, il faut les sniffer par un profiler SQL pour récupérer pile poil les requêtes exécuter par l'ERP,
+
+et vu que y a Accelerator, on va le sniffer : il faut gérer le modèle de données
+
+Onglet et données consolidées dans les onglets, avec la traçabilité, trace des information s OK (pas de modification de la base en direct)
+
+Avec bouton d'action : ce qui a été contrôlé par Sara, et fait la mise à jour du "prêt à facturer"
+
+Tout ce qui a été coché génère des factures la nuit qui suit.
+
+une fois que le point est fait, demi-journée de facturing contest : tester dans l'environnement de pré-prod avant le mi-juillet
+
+Nouvel exercice comptable saisi par Sébastien, on va vérifier que les processus sont viables
+
+Roadmap définitive, gros rush, le 15 août.
+
+15 juillet et 30 août, montée progressive : 4000 factures à sortir en une semaine, une semaine et demi.
+
+ordre de prélèvement, au 6 sept ?
+
+prékèvement au 10 sept ?
+
+on respire
+
+PHASE 3 :
+- sortie automatique en support de Pierre, Sarah, Angelo, si Sébastien est occupé
+
+Jusqu'à mi-octobre.
+
+rendre les chiffres le 15 octobre
+
+Début Octobre : Phase 3
+Tout ce qui est en amont. S'affranchir d'Accelerator
+
+Octobre : récupératrion des fichiers bancaires, faire de l'identifciation de versement automatisés, ensemble des frais de scolarité, des versements de l'année en cours, accompte pour les rentrée en décalées,
+
+février pour accompte pour la future rentrée
+
+Faire du BI sur des données bancaires
+
+Remplacer Accelerator pour éviter à Angelo 70000 saisie dans l'année
+
+Novembre, réconfort sur de l'automatisation.
+
+Contrôle plus compliqués à faire.
+
+Faire des rapprochements
+Les premières écritures.
+
+Vérifier le 1 à 1.
+1 dans la compta sage,
+1 dans l'ERP (Unit4)
+
+419 dans le compte
+411 après la rentrée
+
+Check complémentaires à faire
+
+Transfert vers un futur nouvel ERP, et bénéficier
+Faire appel à l'équipe de DEV si endpoint API nécessaire pour communiquer avec le potentiel nouvel ERP, et ou avec Sage.
+
+Travailler sereignement jusqu'à décembre
+
+Evolution de la prochaine version.
+
+Montée en puissance
+Changement ERP
+
+-----------------
+potentiel 2e billing contest pour être le plus serein
+
+
+répertoire EFREI 
+
+
+--------------------------------------
+à étudier
+
+Interface et code
+Réviser mon SQL
+Langage select
+
+•	Jointure de table (intérieur et extérieur)
+•	Group by
+•	Having (sélection des sommes groupés)
+
+SELECT imbriqués
+Créer une table dans une requête
+
+Windows 2012 server SQL
+
+===============================
+
+Construction d’un rapport sur Unit4
+Crystal Report
+Même principe que sur Access : rapport sur Access (scripting en VBA)
+
+Création de champs et de section
+
+Suivant les groupements :
+Cours par profs
+Par cours, des modalités d’enseignement
+
+Codes d’activités : à catégoriser
+Scripter sur l’entête d’un groupement, 
+
+Exemple entête d’un groupement de prof, faire les traitements pour un prof donné
+
+Facture proforma : valider sur la forme et le fond, mise en place pour les générés
+
+Une ligne par paramètres, avec 40 paramètres
+Une requête pour générer la facture

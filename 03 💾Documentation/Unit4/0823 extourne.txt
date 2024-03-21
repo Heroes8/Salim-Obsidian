@@ -1,0 +1,112 @@
+extourne frais d'inscription
+LIKE "INSCR"
+
+si y a une extourne 
+
+lot de facturation
+générer dans un pdf
+
+---------------
+
+** Pierre ce matin au téléphone, plus de facturation au 23/08/2022
+
+Paramétrage en production
+Cet après-midi, rédaction du protocole
+
+Extourne, extourne partielle, extourne totale
+2 tests de facturation
+
+** préparation des mises en prod 
+*** dont accès serveurs,
+** mise à jour de la vue sur laquelle s'appuie Excelerator
+
+----------
+
+U facturation complet
+et U facturation D
+
+Suivi facturation complément CAC (01/GL30)
+
+>> fait par SGIL avec redonner les droits d'accès, SGIL dispose du compte pour faire l'ajout des types de frais
+u_facturation_complet3d
+
+--------
+
+** anomalie de l'import de la fiche candidat
+>> fait par SGIL
+clients prélèvement sans IBAN
+avant le 07/2022
+présents dans la base candidat
+mais pas dans Unit4
+
+PB IBAN 2022-2023
+
+---------------
+
+mise en production fin de cette semaine/samedi par DME
+
+
+
+-----------------
+
+première facture mardi matin
+
+
+===================
+
+1ère partie de mise en production
+
+1. Droits Obelix vers MyReport pour la remontée des acomptes pour Excelerator
+2. Modification sur le serveur SQL Obelix
+3. Mettre à jour les connexions aux serveurs distants vers MyReport
+
+-------------
+
+montée de version dans Unit4 :
+-> parfois détruit les vues
+
+--------------
+
+import des bourses des anciens
+import des bourses des nouveaux entrants
+remises fratrie
+période comptable et échéancier
+mise à jour de l'EM05
+
+>> création des menus d'édition + paramétrage des configurations 
+>> mettre à jour le nom des rapports en production
+version et archivage des anciennes versions des rapports
+
+=================
+
+faire un avoir total
+
+** FAC-rentree > NF : avoir total
+
+(cas 110 en cas d'extourne total)
+si on facture l'avoir
+
+passage en C = écriture comptabilisée
+ligne négative = en avoir total
+
+==================
+
+** avoir partiel
+
+143796
+
+erreur dans aeminvtrans : éléments non facturés
+facture réceptionnée par l'étudiant
+>> manipulation par SGIL
+
+====
+
+Maintenance Interface Lot
+Comptabilisation facture initiale
+
+
+-----------
+
+1er acompte versement 
+en 419 
+>> en lançant deux lignes est ce que le cumul se fait dans agresso

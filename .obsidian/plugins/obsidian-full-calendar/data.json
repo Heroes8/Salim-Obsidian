@@ -1,0 +1,27 @@
+{
+  "calendarSources": [
+    {
+      "type": "ical",
+      "color": "#de4f6c",
+      "url": "https://outlook.office365.com/owa/calendar/d16b010f49c8460f8d7b3576ecf7eb76@ilki.fr/e3a1ececcb594acc82bcf41aebeb747915569730271143325108/S-1-8-835082506-1964474902-387837237-2058649300/reachcalendar.ics"
+    },
+    {
+      "type": "local",
+      "color": "#5b65f0",
+      "directory": "02 📆Calendar"
+    },
+    {
+      "type": "ical",
+      "color": "#d1a429",
+      "url": "https://calendar.google.com/calendar/ical/hugo.rihet%40gmail.com/private-001c5120bc29645d344282050478740c/basic.ics"
+    }
+  ],
+  "defaultCalendar": 0,
+  "firstDay": 0,
+  "initialView": {
+    "desktop": "timeGridWeek",
+    "mobile": "timeGrid3Days"
+  },
+  "timeFormat24h": false,
+  "recursiveLocal": false
+}

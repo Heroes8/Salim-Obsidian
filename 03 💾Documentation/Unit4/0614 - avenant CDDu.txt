@@ -1,0 +1,152 @@
+sur un brouillon, faire comme sur le modèle principal
+cloturer à la prochaine séance le CDDu
+et finaliser l'avenant de bout en bout
+
+
+document notes de réunion
+page 2 :
+list_nb_jours_per_service
+cours magistraux
+en CDD, généralement peu d'exception
+TD "dans la langue du cours"
+
+dans la doc : possibilité de mettre une image (fichier signature) à intégrer dans un label
+
+
+=====================
+
+avenant : récupérer le numéro de l'avenant
+regarder dans la base
+imiter le document initial
+---------------------------
+
+report Engine : description du fonctionnement de l'outil qui fait les rapports
+Excelerator : récupérer des accomptes pour les intégrer dans Agresso/Unit4
+
+document : Agresso Education 4 - Gestion des Intervenants _MR_.pdf (gestion des contrats)
+génération des rapports unit4 - 
+slide 71 (faire les liens, les datafields)
+Fichier RPX => RDF à transformer en PDF
+
+étude de l'ancien outil qui fait les rapports, avec la dernière version de la documentation
+** ReportEngine.pdf
+
+
+
+télécharger le forticlient
+récupérer les mot de passe
+
+falbala : serveur de preprod et dev
+bonnemine = serveur de base de données
+
+asterix : serveur d'application
+obelix : serveur de base de données
+
+falbala.campus.villejuif
+
+
+preview sur des tests de données, avant d'utiliser l'environnement de DEV
+on prendra en main la plateforme unit4
+
+emplacement de l'éditeur ARC
+
+version 4 ou 5, faire des version 6-7-8
+quand on le mettra dans l'environnement de TEST, on reviendra à la version suivante de la prod
+travailler sur la version la plus élevée
+faire des TEST : suffixer "test"
+------------------------------
+>> Rajouter la signature sous forme d'image
+récupérer TEACHER_CONTRACT_TMP5RPX
+
+Se connecter au VPN
++ RDP à svw19metexp02pr.campus.villejuif
+(dev, preprod et prod de UNIT4 et SQL manager, SQL Editor)
+Falbala : pour les éditions
+
+
+>> 1. serveur de rebond
+
+/SQL_Contrats_CDDu (cf. les requêtes sur lesquelles Didier travaille)
+/Liens utiles unit4 (c'est le lien vers les machines)
+
+>> 2. espace de DEV
+
+3. étudiant, étudiant, finance, facturation, facturation(proformat)
+principe de break 
+>> à regarder xs_breakcol (dans la doc)
+enregistrer dans un type de document qui s'appelle CONTRAT
+
+3b. Catalogue/ressources/requête sur les intervenants. makaya, avenants qui ont été édités
+
+catalogue/ressources/contrats intervenants/attribution/edition contrats
+puis en appuyant sur F12 : lancer l'édition de contrat
+
+catalogue/ressources/contrats/registre fixe : avenant init
+et vérifier que le bon type de fichier (types de document)
+
+>> End. Fermer les applications, et se déconnecter
+
+asterix / customized reports / EM05 : là où l'on a des images pour produire les entête et pied de page ou signature
+
+TEACHER_CONTRAT
+
+------------------
+
+SQL server management studio : profil, lancer des choses, et sniffer
+agrdevm7
+
+HAGRDEV : tables qui sont utilisées lorsqu'on fait certaines éditions
+On enregistre des tables temporaires, pour pouvoir refaire des éditions et travailler sur les r apports
+pour faire les CDDu, lorsqu'on a lancé le contrat
+
+** "Table paramètre temporaire" : la table est enregistrée, elles sont stockées dans une table temporaires en base HAGRDEV
+que l'on peut utiliser sans unit4
+
+2e RDP pour aller sur Falbala 
+pour pouvoir utiliser ARC, c'est sur FALBALA, ARC 
+D / Unit4 Report Engine 9 
+
+tsclient/C/temps
+
+Preview : on peut lui indiquer 192.168.132.128 = falbala
+
+sur les logs : mettre des commentaires pour le debug
+sinon, c'est du texte 
+surligné en vert ce qui est variabilisé
+
+expliqué dans le doc (Merge)
+
+Edit / Query : on verra si y a besoin de faire des champs complémentaires, mais on ne le modifie pas
+la base de script : HAGR : ce sont les tables temporaires utilisées pour faire le jeu de tests
+
+Sub (subroutine et l'ordre d'exécution) On data : (dans la documentation Agresso)
+
+
+ne pas modifier la requête
+afr.Formula : pour la définition des pseudovariable
+
+Onfetch data
+
+
+Merge : par contrat que je traite (lorsqu'on arrive au pied de page, tout le Enriched Text va être relu par le merge et appliquer 
+@ : formule
+? : paramètre
+# : Titre
+else : champs dans le agr.Field
+
+(il faudrait que l'avenant puisse fonctionner)
+
+Se déconnecter
+
+-----------------
+
+
+Ressource ? [/]Registre fixe/Paramétrage des éditions
+colonne Avenant : 
+
+faire un TMP2 AV (pour avenant) et faire un équivalent de l'avenants
+
+type de document 54C0AI (paramètrage valeurs / dans paramètre système)
+
+contrat initial : avenant au CDDu
+faire une nouvelle version et le réduire

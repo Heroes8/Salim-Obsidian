@@ -1,0 +1,58 @@
+0628 manip de test
+deux écrans ouverts :
+Gauche / Droite :
+- dev / prod
+
+** Le test consiste à identifier des lignes particulières (ici des cours) dans les données, et voir le comportementg du générateur de CDDu lorsqu'il est confronté à des profils auxquels ces cours ont été attribués.
+
+
+[10:59] Didier Meier
+L'idée est de voir des cours qui existeront l'année prochaine et qui ont existé l'année dernière en dév.
+
+Dont les langues étrangère en option
+
+
+1 seul groupe en allemand possible et 2 groupes en chinois...
+-------------------------------------
+Le jeu de test :
+
+- les rattrapages, les corrections de copies et d'autres attributions ne doivent pas apparaître sur le contrat de travail [?]
+------------------------------
+groupe de cours 
+
+RATTRAPAGE (cours : *-RAT)
+NOTESEULE = attribution interdite
+
+la lettre à la fin indique le terme : 2021A.EG ou 2021P.EG (P = printemps, A pour automne)
+
+--------------------
+
+SM101 est un module de maths de L1 réalisé sur pl sites
+
+-------------------------------
+
+I = pas encore attribué
+C = associé à un contrat ?
+cocher les cases à gauche
+Si Etat = ENCOURS : on peut les associer à un contrat
+
+cf. TP.PROJET = la requête n'est pas bonne, car elle s'appuie sur la rémunération cf (code activité des intervenants)
+Rémunération : (taux standard de rémunération) : variable en fonction de l'activité et non du mode d'enseignement.
+
+
+>> comprendre les conditions pour éditer un contrat
+E501 : édition de contrat au format PDF : 
+"edition contrat et avenants initiaux" E501 ?
+
+------------------
+
+jeu de test : 
+
+>> deux modifications : 
+
+>> savoir faire des requêtes select sur MSSQL
+
+----------------------
+
+faire des tests ce soir, sinon demain matin,
+demain l'après-midi 16h

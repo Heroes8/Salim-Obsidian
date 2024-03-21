@@ -1,0 +1,26 @@
+tests fonctionnels ce matin sur l'avenant, mais prise du contrat initial,
+faire un premier test, avec l'entête du contrat initial
+
+et 
+
+l'entête de l'avenant
+
+dans le code, en fonction rendre un objet visible 
+
+rendre la partie visible avenant ou contrat
+
+supprimer l'espace
+
+dans la doc de report : initialize, onfetchdata
+
+on a la gestion des objets before print ou after print
+--------
+
+On format fonctionne sur le gfContractId
+
+Height = 0 ! non
+CanGrow = false
+
+ou
+
+Visible = false

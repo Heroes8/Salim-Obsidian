@@ -1,0 +1,300 @@
+{
+  "main": {
+    "id": "43c974838ea01b69",
+    "type": "split",
+    "children": [
+      {
+        "id": "16fd9dabc8bcbe82",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "52adb2f77bb2bce8",
+            "type": "leaf",
+            "state": {
+              "type": "full-calendar-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "88170a672648b89f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00 📒Quick note/EFREI/Sync ID/Unit4 - Note synthèse anomalie comptes STUDENT.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "28c2858f3c384ca2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "04 ⌨️Code/Powerhsell/Header.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0d1d81bff4cb37de",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "04 ⌨️Code/Powerhsell/MySQL NEW.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "23fe65991c93d234",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "04 ⌨️Code/Powerhsell/ArrayList.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ea5e4dd4cc546f9d",
+    "type": "split",
+    "children": [
+      {
+        "id": "ffe773354fd4ef63",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "68fc00e92c96f672",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1b8b84ec6eeea6a6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "terraform",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fd3c6c905db037e0",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 328.5
+  },
+  "right": {
+    "id": "b640959ac209202c",
+    "type": "split",
+    "children": [
+      {
+        "id": "6ac83fede0d68338",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6bdad8581f798f0b",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "e2956d9b68ba51ad",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "ddf253959d244879",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "00 📒Quick note/EFREI/Sync ID/Unit4 - Note synthèse anomalie comptes STUDENT.md"
+              }
+            }
+          },
+          {
+            "id": "155bcf98f13b2389",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "283309a19ca6fb00",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "00 📒Quick note/EFREI/Sync ID/Unit4 - Note synthèse anomalie comptes STUDENT.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9495e65fe6c59f2e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "00 📒Quick note/EFREI/Sync ID/Unit4 - Note synthèse anomalie comptes STUDENT.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "37b4d227b3297860",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "58401126a1a2c5ca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 📆Calendar/2023-03-09.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "ad1a5795e18c4da0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "71a8fedb295a0b5f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 📆Calendar/2023-03-10.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 464.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-full-calendar:Open Full Calendar": false,
+      "obsidian-advanced-slides:Show Slide Preview": false
+    }
+  },
+  "active": "88170a672648b89f",
+  "lastOpenFiles": [
+    "04 ⌨️Code/Powerhsell/MySQL NEW.md",
+    "04 ⌨️Code/Powerhsell/Header.md",
+    "04 ⌨️Code/Powerhsell/ArrayList.md",
+    "00 📒Quick note/EFREI/Sync ID/Unit4 - Note synthèse anomalie comptes STUDENT.md",
+    "04 ⌨️Code/Powerhsell/connexion MySQL.md",
+    "04 ⌨️Code/Powerhsell/Timer.md",
+    "04 ⌨️Code/Powerhsell",
+    "02 📆Calendar/2023-03-09.md",
+    "00 📒Quick note/EFREI/Sync ID/AD- Note synthèse anomalie comptes STUDENT.md",
+    "00 📒Quick note/EFREI/Sync ID/Tu vois le fichier SALIM.md",
+    "00 📒Quick note/EFREI/Sync ID/20230322 - JJ - Epistate (Goal states).xlsx",
+    "00 📒Quick note/EFREI/Sync ID/Unit4 Education 700.14.7.3 Data Dictionary.xlsx",
+    "99 🖼️Image/Pasted image 20230323133539.png",
+    "99 🖼️Image/Pasted image 20230323133531.png",
+    "99 🖼️Image/Pasted image 20230323133353.png",
+    "99 🖼️Image/Pasted image 20230323133213.png",
+    "99 🖼️Image/Pasted image 20230323132857.png",
+    "00 📒Quick note/Perso/ZZZ_Perso.md",
+    "00 📒Quick note/EFREI/Sync ID/Note recherche.md",
+    "00 📒Quick note/EFREI/Sync ID/usersactif.csv",
+    "00 📒Quick note/EFREI/Openstack/Note VIO installation guide.md",
+    "99 🖼️Image/Pasted image 20230320114543.png",
+    "99 🖼️Image/Pasted image 20230317152420.png",
+    "99 🖼️Image/Pasted image 20230316160431.png",
+    "99 🖼️Image/Pasted image 20230316155030.png",
+    "99 🖼️Image/Pasted image 20230316154551.png",
+    "00 📒Quick note/EFREI/Savegarde conf cluster CYBER.md",
+    "00 📒Quick note/EFREI/Openstack/Prep atelier Openstack.md",
+    "01 🗃️root library/Procédures/Compte rendu règles de gestion des comptes et process OnBoarding - EFREI.md",
+    "00 📒Quick note/EFREI/Openstack/Note de réunion de synthèse PoC Openstack.md",
+    "03 💾Documentation/vsphere-esxi-vcenter-server-703-resource-management-guide.pdf",
+    "03 💾Documentation/Openstack/integrated-openstack-72-install-config-guide.pdf",
+    "03 💾Documentation/Openstack/integrated-openstack-72-administration-guide.pdf",
+    "00 📒Quick note/EFREI/Openstack/licence key VIO.md",
+    "03 💾Documentation/Openstack/platform9.pdf",
+    "03 💾Documentation/Openstack",
+    "03 💾Documentation/Nouveau dossier",
+    "99 🧧Export/Compte rendu règles de gestion des comptes et process OnBoarding - EFREI 1.md",
+    "01 🗃️root library/Recompilation d'information OnBoarding.md",
+    "99 🎨Excalidraw/Diagramme de séquence OnBoarding EFREI.md",
+    "02 📆Calendar/2023-03-10.md",
+    "02 📆Calendar/2023-03-08.md",
+    "02 📆Calendar/2023-03-01.md",
+    "00 📒Quick note/EFREI/Sync ID/Note a prévoir pour l'atelier Synchro des ID.md",
+    "01 🗃️root library/Diagramme de séquence OnBoarding EFREI.png.md",
+    "00 📒Quick note/EFREI/Sync ID/Règle d'affectation de groupe EFREI.md"
+  ]
+}

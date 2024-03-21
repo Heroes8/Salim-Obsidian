@@ -1,0 +1,200 @@
+>> RIB => objets réels
+>> possible de les rendre invisible en fonction de pay_method
+
+>>if agr.Formula("pay_method") = "PREL1" then agr.Formula("pay_method") = "Prélèvement"
+si le texte est versement
+
+>> if VERSEMENT => RIB Visible, sinon pas de RIB
+facture et proformat
+
+EM05A_PROF et EM05A
+
+il y a un texte : 
+décaler le texte subreport EM05A_DUE plus bas
+invhead_pk => champs pour l'échéancier qu'on peut rendre invisible
+
+Ce document est une facture provisoire qui ne tient pas compte 
+frais de scolarité...) déjà réglés.
+Une facture complète eintégrant ces réglements sera disponible dès finalisation du traitement administraif  de votre dossier 
+>> même style, uniquement sur la proformat
+
+>> dans le proformat 
+
+
+>> RIB EM05A à intégrer
+
+>> EM05A_REGUL, modèle de régulation : facture telle qu'elle existe en EM05A mais qui effectue uniquement la requête du proformat (aucun versement qui s'affiche)
+
+
+
+
+union all
+	select cu.client,cu.apar_id,cycles.invoice_no,cycles.invoice_date,cycles.student_pk, cycles.student_no, cycles.student_name,
+			cycles.invhead_pk,'Acomptes versés' as description,cycles.parent_fk, cycles.fee_type_id,sum(amount) as amount,
+			cycles.dim_1, cycles.sort_order, cycles.cust_currency,
+			sum(amount) as cust_cur_amount, 0 as cust_vat_cur_amount1
+			,'Avances' as invoicing_section, 3 as sort_order_section
+	from acutrans cu
+	inner join
+		(select h.client,h.apar_id,min(h.invoice_no) as invoice_no,min(h.invoice_date) as invoice_date,min(h.student_pk) as student_pk, min(h.student_no) as student_no
+                    , min(h.student_name) as student_name, min(h.invhead_pk) as invhead_pk,min(d.parent_fk) as parent_fk, 'ACOMPTES' as fee_type_id, min(d.dim_1) as dim_1
+                    , 1000 as sort_order, min(d.cust_currency) as cust_currency
+                    ,' '+cast(d.fiscal_year / 100 as varchar)+'-'+cast(d.fiscal_year % 100 as varchar) as cycle
+		FROM  $?st_head_table AS h
+		inner join $?st_det_table d ON d.invhead_fk = h.invhead_pk AND d.client = h.client
+		group by h.client,h.apar_id,d.fiscal_year
+		) cycles
+	on cycles.client=cu.client and cycles.apar_id=cu.apar_id and cu.account in ('41911000','41100000') and cu.description like '%'+cycles.cycle and cu.voucher_no!=cast(cycles.invoice_no as int)
+	group by cu.client,cu.apar_id,cycles.invoice_no,cycles.invoice_date,cycles.student_pk, cycles.student_no, cycles.student_name,
+			cycles.invhead_pk,cycles.parent_fk, cycles.fee_type_id,
+			cycles.dim_1, cycles.sort_order, cycles.cust_currency
+	having sum(amount)!=0
+) base
+
+
+chercher les versements qui ont été faits
+>> pas nécessaire pour la régularisation
+
+si on ne fait pas un avoir total au niveau d'un programme, 
+facture manuelle de frais spécifiques
+
+il paie son accompte
+
+il fit un versement, dans unit4, pas pris en compte dans la facture
+
+*facture
+*proforma
+*faire les test
+
+blocage GL07
+
+
+
+17129.98 => preprod
+------------
+
+évolution sur les factures
+
+------------
+2e semaine, sur la facture excelrator
+se caler un créneau pour tester
+contacter didier pour fixer un point
+
+-----------
+comment on fait des factures la semaine du 08/08
+
+pleins de contrôles à faire avec Angelo
+--------------------
+
+pour finaliser la dernière requête
+
+V1 sans accompte
+quand on va sortir et automatiser les proformat, pierre souhaite que les proformat sortent avec les accomptes
+
+aemepisode : table des objectifs pédagogiques
+
+lien entre l'étudiant et une offre de programme
+il y a des offres de programme et il y a le modèle
+offre et modèle de cours sur le même principe
+
+les clefs primaires dans les tables et les cours sont toujours un programme Offre ID
+ID du programme_offre_id et un Programme_ID
+et un programme _ pk = clef primaire unique souvent numérique 
+
+7 générations d'évolutions de la base de données
+mêmes clefs dans les mêmes tables
+
+service_id et service_offre_id
+
+
+ctrl + shift + H > Control: middle_name
+
+un obejctif pédago a une clef qui correspond à un épisode PK
+cf. : Clef obj. ped = identifiant unique : ex : 15956 
+
+clef étudiant : student_pk
+
+différent de n°étudiant : student_no : numéro choisi dans une nomenclature lors du paramétrage initial de l'ERP
+student_fk = foreign key
+
+aemprogram
+episode_fk => foreign key
+
+faire un lien entre la table externe ete la table épisode
+
+un étudiant quui fait sa réinscription = il s'inscrit à un o bjectif pédagogique
+création d'un onglet spécifique
+exemple IRF : InscriptionRéinscriptionFacturation
+
+on récupère les dossiers étudiants, statut du dossier de l'étudiant
+prendre la pile des mille dossier,
+
+--------
+
+à chaque nouveau candidat, on va vérifier dans la colonne Obligatoire : champ requis
+vérifié = doit être coché
+
+vérification
+changement de statut de Finalisation => Inscrit
+
+----------------
+
+Menu personnalisé / Outils / Description Flexi-fields
+
+par exemple refattribute id J6 = objectif pédagogique > groupe flexi ID : IRF002 > table flexi afxirf002
+
+aemstudent = étudiant
+aemprogramoff = offre de programme
+le modèle
+le fee
+
+
+fee_type_id
+
+aemvi = vues
+aem
+
+-------
+
+le student no est dans aemstudent pour toutes les tables comptables, ACU, invoicetrans, tables comptables de la facture , apar_id
+le student no est équivalent du numéro client (en compta)
+
+
+USE agrdevm7
+GO
+
+SELECT afx2.required, afx2.checked, ast.student_no, apg.programoff_id, apg.program_id, apg.program_desc, afe.fee_type_id, afe.amount FROM afxirf002 afx2
+INNER JOIN aemepisode apo ON afx2.attribute_id = 'J6' AND afx2.client = apo.client AND apo.episode_pk = afx2.dim_value
+INNER JOIN aemstudent ast ON ast.student_pk = apo.student_fk AND ast.client = apo.client
+INNER JOIN aemprogramoff apg ON apg.program_id = apo.program_id AND apg.programoff_id = apo.programoff_id AND apg.client = apo.client
+INNER JOIN aemprogram apr ON apr.client = apo.client AND apr.program_id = apo.program_id
+INNER JOIN aemfeeitem afe ON afe.client = apr.client AND afe.parent_fk = apr.program_pk AND afe.parent_id = 'JF'
+WHERE afx2.client = 'E1' AND afe.fee_type_id LIKE 'INSCR%' AND afx2.checked = 1 AND afx2.required = 1
+AND apo.episode_pk = 15956;
+
+ne pas partir du flexifield
+
+>> partir de celle dans le proforma, sans accompte, et construire une requête avec les liaisons
+>> vérifier si check et required du montant d'accompte : à intégrer comme un accompte dans l'EM05A : comme si caavait remonté une valeur
+
+-----------
+
+on ne veut pas vérifier si il a 
+on va chercher dans le programme le montant
+
+
+sur la proformat : frais d'inscription
+seul l'accompte de frais d'inscription apparait sur la proforma
+avec ou sans accompte
+
+frais d'inscription checked en vérifié : un accompte a été versé
+
+------------------
+
+Excelerator
+correction dans la compta, rapprochement
+faire les checks la semaine d'après : l'édition de facture marche-t-elle ?
+la compta présente avec le DAF (Pierre) à partir de septembre
+
+avec sébastien, travailler sur le fichier Excel pour faire les checks automatiques
+sinon, automatisation du check en se connectant tous les matins

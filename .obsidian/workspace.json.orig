@@ -1,0 +1,297 @@
+{
+  "main": {
+    "id": "43c974838ea01b69",
+    "type": "split",
+    "children": [
+      {
+        "id": "175d5ee07928acd1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "63f05982c7088f0f",
+            "type": "leaf",
+            "state": {
+<<<<<<< HEAD
+              "type": "empty",
+              "state": {}
+=======
+              "type": "markdown",
+              "state": {
+                "file": "00 📒Quick note/test salim.md",
+                "mode": "source",
+                "source": false
+              }
+>>>>>>> d949181dc11d12d4521e2ee41bc85f7ce989552a
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ea5e4dd4cc546f9d",
+    "type": "split",
+    "children": [
+      {
+        "id": "ffe773354fd4ef63",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "68fc00e92c96f672",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1b8b84ec6eeea6a6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fd3c6c905db037e0",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "29e5262194a5c5fd",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 348.5
+  },
+  "right": {
+    "id": "b640959ac209202c",
+    "type": "split",
+    "children": [
+      {
+        "id": "6ac83fede0d68338",
+        "type": "tabs",
+        "dimension": 26.648160999306036,
+        "children": [
+          {
+            "id": "d0f3a3614b39458a",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "e2956d9b68ba51ad",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "155bcf98f13b2389",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "283309a19ca6fb00",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+<<<<<<< HEAD
+=======
+                "file": "00 📒Quick note/test salim.md",
+>>>>>>> d949181dc11d12d4521e2ee41bc85f7ce989552a
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9495e65fe6c59f2e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+<<<<<<< HEAD
+=======
+                "file": "00 📒Quick note/test salim.md",
+>>>>>>> d949181dc11d12d4521e2ee41bc85f7ce989552a
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "5835a6dcc53791b7",
+        "type": "tabs",
+        "dimension": 45.52394170714781,
+        "children": [
+          {
+            "id": "269b30bd03239dfa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 📆Calendar/2023-07-27.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "9d210806f01bc221",
+        "type": "tabs",
+        "dimension": 27.82789729354615,
+        "children": [
+          {
+            "id": "ddf253959d244879",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+<<<<<<< HEAD
+              "state": {}
+=======
+              "state": {
+                "file": "00 📒Quick note/test salim.md"
+              }
+>>>>>>> d949181dc11d12d4521e2ee41bc85f7ce989552a
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "omnisearch:Omnisearch": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "obsidian-full-calendar:Open Full Calendar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
+    }
+  },
+  "active": "63f05982c7088f0f",
+  "lastOpenFiles": [
+<<<<<<< HEAD
+    "conflict-files-obsidian-git.md",
+    "00 📒Quick note/test salim.md",
+=======
+    "00 📒Quick note/Vite fait/Note entretien Sebastien GIL sur les comptes sortant.md",
+    "00 📒Quick note/test salim.md",
+    "03 💾Documentation/CIS Benchmarks/CIS_AKS_Optimized_Azure_Linux_Benchmark_v1.0.0.pdf",
+    "03 💾Documentation/CIS Benchmarks/CIS Docker Benchmark v1.5.0 PDF.pdf",
+    "03 💾Documentation/CIS Benchmarks/CIS_Microsoft_Intune_for_Windows_11_Benchmark_v1.0.0.pdf",
+    "03 💾Documentation/CIS Benchmarks/CIS_Microsoft_Intune_for_Windows_10_Release_2004_Benchmark_v1.0.1.pdf",
+    "03 💾Documentation/CIS Benchmarks/CIS_Microsoft_Intune_for_Windows_10_Benchmark_v1.1.0.pdf",
+    "03 💾Documentation/CIS Benchmarks/CIS_VMware_ESXi_6.7_Benchmark_V1.3.0.PDF",
+    "03 💾Documentation/CIS Benchmarks/CIS_VMware_ESXi_5.1_Benchmark_v1.0.1.pdf",
+    "03 💾Documentation/CIS Benchmarks/CIS Kubernetes Benchmark v1.7.0. PDF.pdf",
+    "04 ⌨️Code/Windows/Chocolatey.md",
+    "04 ⌨️Code/Windows/Install terraform windows.md",
+    "04 ⌨️Code/Powerhsell/My profile file.md",
+    "04 ⌨️Code/Powerhsell/Documentation/Try-Catch.md",
+    "04 ⌨️Code/Powerhsell/Documentation/Timer.md",
+    "04 ⌨️Code/Powerhsell/Documentation/Switch.md",
+    "01 🗃️root library/Journal de troubleshooting/Installation OpenWRT.md",
+    "04 ⌨️Code/Network/OpenWRT flashing material",
+    "04 ⌨️Code/Network/OpenWRT flashing material/openwrt-qualcommax-ipq807x-dynalink_dl-wrx36-squashfs-sysupgrade.bin",
+    "04 ⌨️Code/Network/Config file for AP.md",
+>>>>>>> d949181dc11d12d4521e2ee41bc85f7ce989552a
+    "01 🗃️root library/référentiel/Powertoys.md",
+    "04 ⌨️Code/Network/OpenWRT flashing material/openwrt-qualcommax-ipq807x-dynalink_dl-wrx36-squashfs-sysupgrade.bin",
+    "04 ⌨️Code/Network/OpenWRT flashing material/openwrt-qualcommax-ipq807x-dynalink_dl-wrx36-squashfs-factory.ubi",
+    "04 ⌨️Code/Network/OpenWRT flashing material/openwrt-qualcommax-ipq807x-dynalink_dl-wrx36-initramfs-uImage.itb",
+    "04 ⌨️Code/Network/OpenWRT flashing material/backup.cfg",
+    "04 ⌨️Code/Network/OpenWRT flashing material",
+    "01 🗃️root library/Journal de troubleshooting/Installation OpenWRT.md",
+    "04 ⌨️Code/Powerhsell/Projects/Academ/5AEFE000",
+    "04 ⌨️Code/Powerhsell/Projects/Academ/~$Import_Offres_2023-2024_-PGE-PEx_31-mai-2023.xlsx",
+    "04 ⌨️Code/Powerhsell/Projects/Academ/E077E000",
+    "04 ⌨️Code/Powerhsell/Projects/Academ/B750E000",
+    "00 📒Quick note/EFREI/Facturation/Facturation & Academ.md",
+    "03 💾Documentation/Unit4/0620 - intervenant refonte facturation.txt",
+    "04 ⌨️Code/Excel/Comment figer une ligne.md",
+    "04 ⌨️Code/Excel/Changer le séparateur décimal.md",
+    "04 ⌨️Code/Excel/Changer le nombre de nombre après la virgule.md",
+    "Untitled.md",
+    "01 🗃️root library/Procédures/GITHUB create repo and sync locally (Windows).md",
+    "99 🎨Excalidraw/Dell MD3820i présentation et configuration de matériel.md",
+    "99 🎨Excalidraw/OnBoarding-ManyRes-per-User.md",
+    "99 🎨Excalidraw/OnBoarding-ManyVM-per-Group.md",
+    "99 🎨Excalidraw/OnBoarding-SingleVM-per-User.md",
+    "99 🎨Excalidraw/Arbre de décision - règle de création de compte.md",
+    "99 🎨Excalidraw/LABO - Coeur de réseau.md",
+    "99 🖼️Image/Pasted image 20230811151551.png",
+    "00 📒Quick note/Perso/Synching Obsidian.md",
+    "04 ⌨️Code/Windows/Install terraform windows.md",
+    "04 ⌨️Code/Linux/Install Ansible UB22.04.md",
+<<<<<<< HEAD
+    "04 ⌨️Code/Windows/Chocolatey.md",
+    "99 🎨Excalidraw/etat restant qui doivent correspondre à des comptes actifs.md",
+    "99 🎨Excalidraw/Diagramme de séquence OnBoarding EFREI.md",
+    "99 🎨Excalidraw/Arbre de décision - cycle de vie des comptes étudiant.md",
+    "04 ⌨️Code/Git/Github - good practices.md",
+    "04 ⌨️Code/Git/Github good practice.md",
+    "04 ⌨️Code/Powerhsell/Documentation/Hash Map.md",
+=======
+>>>>>>> d949181dc11d12d4521e2ee41bc85f7ce989552a
+    "99 🖼️Image/Pasted image 20230810160403.png",
+    "99 🖼️Image/Pasted image 20230810160254.png",
+    "99 🎨Excalidraw/Arbre de décision - cycle de vie des comptes étudiant.png",
+    "99 🎨Excalidraw/Arbre de décision - cycle de vie des comptes étudiant.svg",
+    "99 🎨Excalidraw/Arbre de décision - règle de création de compte.svg",
+    "99 🎨Excalidraw/OnBoarding-SingleVM-per-User.png",
+    "99 🎨Excalidraw/OnBoarding-SingleVM-per-User.svg",
+    "99 🎨Excalidraw/OnBoarding-SingleVM-per-Group.png",
+    "99 🎨Excalidraw/OnBoarding-SingleVM-per-Group.svg",
+    "Sans titre.canvas",
+    "Sans titre 1.canvas"
+  ]
+}

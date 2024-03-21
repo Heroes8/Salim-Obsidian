@@ -1,0 +1,154 @@
+>> il faudra remettre entête et pied de page sur les contrats CDDu lorsqu'on passera sur Docusign
+
+** actuellement contrat à part pour les M2 ; contrat annuel avec un terme spécifique, car l'identifiant n'est pas OK
+(10 - 15 contrats)
+
+semestrialisé : on ne sait pas qui va faire cours au semestre d'après
+= on fait les attributions sur le 1er semestre et 2nd semestre, la personne reçoit des tâches supplémentaires sur le 1er semestre > il faut faire un avenant sur les deux semestre en même temps
+s'il suffit de modifier les ID de contrats, on modifie les ID des contrats
+
+** concernant l'avenant, un seul document, solution de contournement en place
+
+=======================
+
+MyReport a été réinstallé complètement par un presta externe, sans contrôle IT, sans contrôle compta (sans vérification des accès, login, mdp, pas de supervision base de données)
+
+rétablissement des connexions
+
+>> envoi des infos à SGIL
+
+------------------
+
+faire quelques requêtes pré-intégration avec Angelo
+pour faire des contrôle d'éléments dès MyReport
+Pour faire les vérifications avant intégration dans Excelerator
+
+==========================
+
+validation du process de dématérialisation des factures en environnement de dev, avec Damien et Antoine, jeux de tests conséquents
+correction de requêtes de remontée de documents en fonction des liaisons d'attribut
+
+=> plus besoin d'imprimer = la facturation est beaucoup plus rapide
+
+- 2 formats de proforma
+- pour les factures complémentaires, facture de "régulation" avec les écritures classiques sans acompte/versements
+
+=========================
+
+Q° de SGIL :
+intégration des acomptes = fait par l'Excelerator : lancé tous les jours
+quel est la fréquence d'intégration d'acompte
+sortie de facture
+Envoi dans la compta SAGE : +411 -411 
+Les acomptes sont des versements versés avant...
+
+Angelo l'indique dans Sage
+il rajoute les lignes dans l'acutrans
+avant de lancer le GL07
+
+======================
+
+<<*fait* Faire les mises à jour des champs dans EM05
+
+<<*fait* ASR : intégrer les valeurs 
+
+Dématérialisation en DEV = OK
+Juan Miguel attend pour mettre en prod le 28 août
+
+=========================
+
+aller jusqu'à une facture complète en réintégrant ce qu'il y a de Excelerator
+
+==========================
+
+>> SGIL vérification si réception du fichier pour les versements Human'IT
+
+priorité de SGIL : carte étudiant, et facturation
+
+--------------------------------------
+
+* dans une feuille excelerator, connexion dans Excelerator, choix preprod prod
+
+détail : liste de ce qui a été récupéré
+le contrôle se fait sur l'onglet details
+
+rien n'a été remonté dans Agresso
+
+récupération de la valeur d'attribut
+
+pour comptabiliser : Renvoyer Comptabilisation : intégration des factures via le GL07
+
+traitement de toutes les lignes colonne C de details
+> yes = va être traité
+
+Il y a des étudiants 2018xxxx ou 2019xxxx : réinscriptions
+
+le rapprochement n'a pas encore été fait
+cf, requête du dossier SQL_frais_inscri_scola : à lancer sur DWH_MYREP_BE
+900 rapprochements avec le numéro d'étudiant ont été fait
+1600 à faire
+
+(les CFA ne sont pas facturés)
+
+** il y a des étudiants en 2022-2023 remontés dans Excelerator depuis Sage ; mais qui n'ont pas encore fait l'objet du rapprochement de versement ?
+
+?? limitation sur le nombre de lignes
+SGIL : non
+
+** sur les imports faits pour les nouveaux étudiants, ce sont les 12 premiers (tous les 2022, avec un acompte, non CFA, et nouveaux étudiants)
+
+** pour modifier le jeu de test, retirer les yes
+dans le menu, charger la feuille envoi Agresso et contrôle global
+
+** inscription faite
+** déclenchement des lignes
+>> regarder le replay
+
+>> rappel des échéances même style à appliquer sur Références bancaire
+* tableau aligné en hauteur
+* tableau et texte du RIB aligné sur la gauche
+IBAN 
+BIC aligné sur le bord tableau gauche
+
+GL07 = écritures comptables pour les acomptes
+TPS07 = gestion des écritures comptables
+(timed processes)
+EM05 facturation
+
+>> RIB qui apparaît alors que pas de versement
+
+======
+signalétique
+2x
+
+>> ASR  demander au métier comment traiter le cas 01
+>> ASR regarder pourquoi il sort en vrai faut le 20211541
+
+>> faire une facture de régulation
+
+Type de ligne : G = compta générale : balance à 0
+
+>> voir Schémas d'écriture avec Pierre
+
+>> cas à tester : avoir partiel, avoir total, avoir sur des frais d'inscription, réintégration de l'acompte
+si avoir partiel : ligne à -1000, ils ne sont pas réintégrés > changement : passage en 2x > génération d'un avoir
+
+- avant ouverture période comptable
+- intégration avoir
+- réintégrer après ouverture période comptable
+- réintégration des acomptes, AG16
+
+================================
+
+faire un tour des pré-contrôle, pré-facturatiion
+
+>> échéancier
+>> jeu de tests avec étudiants
+- réinscription
+>> vérification du proforma
+>> vérification facture de régulation par ajout de frais supplémentaires, remontée d'acompte
+>> test avoir total : avant la date d'échéance, il a été facturé, changement de programme et d'objectif pédagogique, CHGT-PROG (cloture de l'ancien pédagogique)) : ce n'est pas le même axe analytique, il faut CHGT-PROG > avoir total à faire
+
+** la requête pour faire un export SAGE
+
+

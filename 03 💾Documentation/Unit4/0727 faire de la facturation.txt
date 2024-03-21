@@ -1,0 +1,16 @@
+Facture : 10 000
+
+Accompte 1000
+---------------------------
+9000
+
+ECHANCIER de 1000 par mois
+
+VERSEMENT 1 : 1000
+VERSEMENT 2 : 1000
+----------------------------
+reste à payer : 7000
+							Facture complémentaire ('/de régulation /sans accompte SSACCOMPTE')
+							FRAIS SUPPLEMENTAIRES : 500 complémentaire
+							
+							

@@ -1,0 +1,28 @@
+Tests preprod du contrat unifié
+
+* Il faut passer le statut du contrat à "En cours" pour pouvoir l'éditer
+* Imprimer les contrats sélectionnés dans la fenêtre contrat, cocher les cases
+
+>> Dans le code contrat : ni A, ni P, c'est l'année de M2 (regarder le terme : -M2-)
+
+Vérifier que c'est bien au terme : 3e lettre, dernière lettre du terme
+
+regarder, si y a un tiret => contrat uinitial
+
+date d'impression
+22-024-00 => avenant 22A098-50
+Automne ou printemps, -M2-
+
+printemps, associé à un contrat printemps
+automne => associé au contrat automne
+
+
+si le terme ne se finit pas par A ou P => c'est que le
+
+si le terme se finit par -M2-
+les 5 premiers caractères sont le bon terme
+
+si le terme se finit par -M2-
+s'il existe un document édité dont le préfixe terme match le préfixe terme du contrat à éditer
+alors c'est avenant dont le numéro reprend l'id_contrat +1
+sinon c'est un nouveau contrat

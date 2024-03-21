@@ -1,0 +1,161 @@
+0712 tests des documents
+
+connexion à falbala (serveur application)
+
+allumer le ARC viewers
+
+bx86 / customized report
+
+cf : TEACHER_CONTRACT_ => version d'aujourd'hui
+
+Didier en fait une copie dans le modèle de contrat 16, RPX : TEACHER_CONTRACT (date de modification)
+
+Sur falbala :
+
+TEACHER AVENANT 12072022
+
+--------
+
+Reporter une partie de l'un dans l'autre en faisant 
+> Ouverture de l'Avenant
+
+
+Comparaison des requêtes
+
+-------
+
+Dans le document : correction, insertion des valeurs avenant suffixe
+récupération d'une signature
+
+Mise en place salariés : pas de majuscule
+
+>>> activity monthly : heures if < 1 => Heure ou heures
+Avenant + Contrat
+
+sur le serveur applicatif
+
+nom du fichier du test
+RQ tests CDDU
+-----
+saut de ligne, espace dans la requête
+
+_________________________________
+301801
+
+Facture
+Proforma  : Propriété : VISIBLE / ou non
+
+requête pour interroger la liste de tous les étudiants
+et celle pour 1 étudiant
+
+> récupération de la facture
+
+S'il y a 1 facture visible, sur la même année
+Propriété du document > non visible
+
+Générer la requête
+> Proforma
+
+Propriété du document = NON
+
+----------
+
+ce que l'on veut faire : 1 étudiant avec une proforma, 1ère facture, voire une 2e facture
+
+recherche d'un profil 2018 en formation initiale
+20180018 : 
+
+> regarder l'objectif pédagogique
+
+10- Finance
+
+NF = non facturable sur la propriété "début de session"
+
+saisir FI => F12, liste des frais
+
+FIN de session :  Fac ADD1
+DEBUT Sessiion Fac rentrée
+
+Groupe de frais en 2x = paiement en 2 fois.
+
+Bouton Mise à jour des sessions : si on fait une modif
+
+trouver une personne 
+NF en début de session
+FAC RENTREE = fin de session
+
+en modifiant la session
+=> génération de la facture automatique dans l'onglet 10- Finance
+
+Gestion de l'étudiant > Finances > Facturation (proforma)
+Visible OUI
+Date de base de facturation : 01 / 09 / 2021
+
+L
+es rapports de DEV et PREPROD sont dans le même dossier
+EM05 PROFORMAT
+
+EM05a proforma
+EM05 due proforma
+
+---------------
+
+ARC Viewer
+Paiement par Prélèvement
+=> RIB de l'EFREI
+Renseigner EM05 pour gérer la facture
+=> F12 : n° de commande 200055
+A = facturé
+B = pas encore faccturé
+C = historisé
+
+La loupe en haut à côté de la feuille et de sigma
+liste des processus
+Edition de facture a planté
+
+Modèle d'édition : 4
+Facture proformat > cf. report_file1
+
+statistiques en haut > liste des factures
+
+date base de facturatiion
+étudiant
+étudiant
+ID Programme
+Promotion de... à .... 2019-2020
+période sept-19
+date de facture
+
+commande > sans lignes à facturer
+
+----------
+
+étudiant 20180020
+
+date de dernière mise à jour : accès au propriétés, ça compte
+
+------------------
+
+Sur le proforma :
+- TEACHER CONTRAT : travailler sur l'avenant
+Falbala : gestion des intervenants > validation des attributions intervenants/cours : 837 
+il faut être en preprod
+
+ressource 837, il y a deux contrats, attribution M2 en 2022-2023
+ajout d'une ligne : TE506-TD, 2223S5-C, 837, U, V, TD => Etat Confirmé [C]
+sélectionner la ligne,
+"Associer à un contrat", même période : 
+
+regarder l'algo pour passer du contrat initial à l'avenant initial
+=> avenant est en cours
+
+Si term différent : création d'un nouveau contrat
+Désassocier : I = non confirmé
+
+----------------
+
+on ne récupère pas le document de l'avenant
+
+-----
+
+création d'index de documents à faire pour avoir le document

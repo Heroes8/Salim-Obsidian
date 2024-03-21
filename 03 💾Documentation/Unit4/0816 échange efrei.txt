@@ -1,0 +1,10 @@
+transférer depuis la preprod prod
+
+proforma (sans prise en compte des accomptes)
+
+regul sans échéancier ? (sans échéancier)
+
+check avec prise en compte dans l'échéancier
+----------
+
+-- exchange de rate

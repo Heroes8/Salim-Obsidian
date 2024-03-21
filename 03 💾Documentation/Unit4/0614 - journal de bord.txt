@@ -1,0 +1,24 @@
+connexion par Forticlient VPN ok
+accès au serveur de rebond svw19metexp02pr.campus.villejuif ok
+- ouvrir UNIT4 ok
+
+
+- rebond vers falbala
+- lancer ARC viewers
+- uploader le 5
+- lancer le preview, relire le log (ligne par ligne)
+---- la query est dans le log
+
+
+- il me faut explorer le modèle de données
+
+_____________________
+220622
+
+création à partir de TEACHER_CONTRACT_TMP5.rpx
+sous le nom TEACHER_AMEND_TMP_1
+
+
+y a quelques différences de mise en forme
+orthographe ?
+numéro de page absent de la première page

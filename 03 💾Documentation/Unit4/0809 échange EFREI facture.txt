@@ -1,0 +1,262 @@
+0809
+facture regulation = facture subséquente
+la 1ère facture : facturation de la totalité
+
+Facturation :
+** brouillon = test
+** comptabilisée = comptabilisée par la facturation standard
+** facturation proforma (celle qui vient d'être mise en place)
+
+Faire une facture : 
+session demandée : date d'échéance : échéancier de la session
+
+session facturable
+
+si l'étudiant est au programme L1, suivant son groupe de frais
+
+plan de : * = ça s'applique à tous
+SA = semestre d'automne redoublé
+
+printemps
+pge : inscription PGE
+
+Type de frais :
+- frais d'inscription
+- frais de scolarité
+
+sur le 30180001 : 
+objectif pédagogique 2022-2023 / finances
+prix à facturer :
+
+A : lignes descendues côté étudiant (à facturation)
+facturation
+
+Objectif pédagogique > Mise à jour de session > F12
+
+====================================
+Chercher dans la compta : Envoyer un mail à Angelo, car de retour de congés (demain)
+
+Par rapport à MyReport
+Accelerator : problème de doublon
+====================================
+accompte sur les frais d'inscription : dus en totalité
+s'il annule avant la rentrée : on le rembourse
+s'il vient et arrête après la rentrée, on ne le rembourse pas
+
+Il verse ses frais lorsqu'il s'isncrit : on le voit dans la compta
+
+MyReport va récupérer des données dont Sage : journal de versement
+"Lettrage" avec les étudiants
+Réception d'un versement : associé à l'étudiant car dans le libellé de paiement, il faut saisir le numéro d'étudiant
+il faut le mettre dans un champ spécifique 
+INFR-2022-2023
+
+Quand on fait la facture, l'accelerator va être ouvert, il va charger ce qui a été fait (l'ensemble des données de la compta, l'ensemble des données de Unit4)
+Rajouter ce qui n'existe pas dans Unit4 à mettre dans Unit4
+Ce qui existe dans Agresso
+Versement : frais d'inscription ou scolarité > remonter dans Unit4
+On créé les points qui n'existent pas encore dans Unit4
+
+La base de données compta côté Unit4
+La Compta doit être la plus propre possible
+
+Durant le Billing contest : on a fait qq requête pour identifier d'éventuels points à contrôler dans la compta
+
+Passer du temps avec Angelo pour remonter les versements,
+Rexécuter les requêtes, sortir les requête dans un fichier Excel
+
+Faire un export, si on doit le faire vendredi, Didier se connecteera pour faire un export
+
+>> créer les données ensemble avec Didier, prise de contact
+
+quand on remonte les données de Unit4 dans Sage, il va relier les clients aux éléments comptables
+
+Frais d'acompte (frais d'inscription sous forme d'acompte)
+Quand on lance la facture : il ressort des frais de versements
+
+Il y a une partie de la requête qui vérifie s'il y a des versements.
+C'est au moment où l'on créé la facture qu'on voit les versements
+/ afficher paramètres fixes
+*Variantes GL07
+
+Comptabilisation factures forlmation initiale
+/création de format d'édition
+/version 56	+ Tab (pour valider)
+query_param1
+query_param2
+query_param3
+=> AG15 et AG16 sont des requêtes lancées avant la facturation réelle
+
+On édite le rapport, EM05 (proforma, brouillon) = papier de la facture
+Ensuite, pour la facturation comptabilisée : on lance le GL07 : mise en place des écritures comptables dans Unit4
+Prise en compte des lignes à facturer
+On regarde dans les lignes des objectifs pdédagique pour voir si y a des lignes en A, on va prendre chacune des lignes en A, > Maintenance interface Lot, retrouver le lot de plantage
+
+Engrenage / Administrastation/Edition / Requêtes SQL
+Définition Requête (ACOMPTES + B + tab)
+Les 3 premières requêtes vérifient les dates (N°Séq 10, 20, 30)
+
+batchinput : lignes qui doivent être prise en compte
+
+Pour une facturation : regarder tout ce qui peut être facturé à un étudiant (dont Programme)
+
+Quand on lance une facturation, on fait des check
+3 tests sur les dates
+sur la ligne N°Seq 100 : cette requête écrit dans le batchinput : 41911100 : écritude de lignes d'ajustement comptable
+- préparation des lignes facturation
+- recherche des accomptes des programmes
+- tout ce qui est en accompte, il va mettre le flag Acompte
+419 : versement d'acompte
+les étudiants qui ont versé l'accompte en février, l'exercice comptable suivant n'est pas encore ouvert
+
+On va dans l'exercice précédent : accompte perçu d'avance 419.11 = un étudiant a payé en avance un acompte par rapport à l'exercice comptable
+419.11 = frais de scolarité/inscription paiement en avance
+
+411 : compte client classique
+
+Préparation des écritures comptables
+
+avant le Union all : recherche des accomptes : inscription en négatif
+
+419.11 => en -100,
+411 => +100
+retrouver les explications dans clients
+
+- liens avec MYreport depuis la réinstallation
+
+avec Angelo : tester 
+
+AG16 acompte se déclenceh après EM05
+écrire deux lignes + X - X s'il a versé dans la bonne année
+
+110 : si un avoir : ligne négative qui constitue des frais d'inscription, on fait une avoir complète / avoir total
+
+faire afficher les versements
+un étudiant inscrit en L1, passage en L1-bio,
+Faire un avoir complet sur tout ce qui a été facturé en L1
+Il faut prendre en compte tous les frais d'inscription
+
+si l'acompte était 
+on vient annuler le 411"au jour d'aujourd'hui"
+> feeitem_id :
+
+t.fee_type_id='INSCRIPTION'
+/*DME 09/08/2022
+
+>>and left(t.fee_type_id,5)='INSCR'
+à faire en prod également
+
+-------------
+
+au moment de la facturation
+faire une apremière facture : avec des acomptes versés
+
+versement de frais de scolarité
+VERS22-23 : lignes qui vont se rajouter
+facturation des frais de scolarité
+on a pris en compte son 1er versement de scolarité, et il faut facturer 500€ de plus
+versement d'un second versement de scolarité
+Facture au 31 août
+versement de 5000€ remontés 
+2 jours d'écart avec Excelerator
+
+versement au 10 de 5000€
+facturation au 15 de 500€
+
+le 16 : facturation de 500, versement > annuler l'écriture
++411, -411
+
+en Sage : -419 +411
+
+facturation de régularisation : programme L1, facturation de la différence si changement de programme 2x => 10x
+
+facturation : avec AG15 = fait les bonnes écritures
+faire une action manuelle : facture qui mentionne les versements et les accomptes
+facture qui se fait à la main
+
+Facturation (comptabilisée) = facture classique
+Proforma : uniquement fait avec des frais de programme (est-ce qu'on met les acompte ou pas)
+
+suivi échéancier : +300 > 300/groupe de frais 10X
+
+======
+Proforma / création modèle édition
+
+régulation = comptabilisée
+comptabilisée
+proforma : rechercher dans le programme
+
+>> échéancier
+>> Texte sur toute la largeur
+>> sur toute la largeur avec alignement à gauche du Page Footer
+
+proforma sans acompte
+reprendre une qui remontait les frais d'acompte
+episode_pk
+>> episode_pk = à retrouver
+Hagrdevm
+
+Formula "episode_pk" vérifier
+
+==================
+prise de contact avec Angelo
+Sarah a dû envoyer un mail pour faire des checks de vérification
+
+se connecter bonemine
+C:\Users\EXT-CMP-ILK-01\Desktop\SQL_COMPTE_VERIF_INSCR_SCOLA
+les trois requêtes
+
+172.26.129.98 = serveur my report
+c'est la vue d'excelerator
+choisir preprod ou AGRDEVM7
+au bout des colonnes : check_INSCR_amount_1 et CHeck_SCOL_amount_1
+reason INSCRI / season : 
+invoice_no : INSCRI 22-23 = ce sont les montants reçus par la banque, avec un étudiant associé, et il marque INSCRI 22-23 
+ligne de régulation
+montant négatif : vérification d'où ça vient
+
+entre aujourd'hui et le premier janvier 2022
+AND mytable.voucher_date BETWEEN '01/01/2022' AND GETDATE()
+
+MyReport dans la compta > frais d'inscription
+check frais scolarités => il faut d'abord commencer par payer des frais d'inscription
+si y a des frais d'inscriptions 
+
+si les frais de scolarité sont payés avant les frais d'inscription, ce ne sont pas écrit de la même manière en compta que dans les opérationnels/fonctionnels (colonne CHeck SCOL amount)
+
+la requête permet d'avoir une liste d'éléments à vérifier
+
+2e requête : Unit 4 créé les étudiants > export vers la compta en tant que Client
+
+connexion via Excel pour faire la requête dans MyReport
+mise à jour d'onglets
+création local d'un OLDB
+
+fichier excel de référence
+
+compléter la base de données avec une table pour les actions
+
+
+	  , CASE WHEN ([reason] LIKE 'INSCRI' AND [amount] != 500 AND [amount] != 900 AND [amount] != 1500) THEN 'Check amount' ELSE '' END as Check_INSCR_amount_1  
+	  , CASE WHEN ([reason] LIKE 'SCOLA') THEN 'check si frais inscr ok ?' ELSE '' END as CHeck_SCOL_amount_1 
+> les cas particuliers
+
+
+octobre : rentrée décalée en janvier
+ces nouveaux étudiants, et les nouveaux programmes, cette automatisation montrée, on va le faire
+
+processus de RPA à la place de la comptabilité
+
+>> reprise de contact avec Angelo, capter les aspects techniques, 
+=== pour le futur
+sur l'ERP, y a beaucoup de choses à faire
+tests sur la dématérialisation / associer les ancres dans Docusign
+
+EMLyon qui utilise
+HEC
+
+synthèse de myreport dans des requêtes
+
+Angelo LAPLACE <angelo.laplace@efrei.fr>
+transmettre dans les requêtes
++33 188 289 174 

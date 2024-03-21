@@ -1,0 +1,51 @@
+{
+  "confirmDeletion": true,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [
+    {
+      "id": "obsidian-git:push2",
+      "icon": "github",
+      "name": "Obsidian Git: Push",
+      "mode": "any",
+      "color": "#cd132f"
+    },
+    {
+      "id": "obsidian-git:pull",
+      "icon": "git-pull-request",
+      "name": "Obsidian Git: Pull",
+      "mode": "any",
+      "color": "#1dc920"
+    },
+    {
+      "id": "obsidian-git:commit",
+      "icon": "git-commit",
+      "name": "Obsidian Git: Commit all changes",
+      "mode": "any",
+      "color": "#c44bdd"
+    }
+  ],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": []
+  },
+  "spacing": 8,
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

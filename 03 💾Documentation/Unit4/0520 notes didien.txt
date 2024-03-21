@@ -1,0 +1,29 @@
+ancienne verison
+génération de rapport pour l'EFREI
+reporting
+visual basic à faire
+facture pro-format
+génération de requête
+
+ancienne version
+maintien avec ERP
+
+-------
+
+rapprochement Excel avec 
+accompte client 512
+
+scripting du vba
+
+-------
+
+marché public cloud pour l'administration
+OPEX
+législation juridique 
+Plan comptable
+législation française
+pas d'amortissement sur leasing en France, par rapport aux US => c'est lié aux normes RMCC et aux normes IFRS
+
+
+crédit-bail = leasing
+https://fr.wikipedia.org/wiki/Cr%C3%A9dit-bail#Selon_les_normes_IAS/IFRS_(internationales)_2

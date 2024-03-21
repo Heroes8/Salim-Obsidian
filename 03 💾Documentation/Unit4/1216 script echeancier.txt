@@ -1,0 +1,30 @@
+select sum(calc.cur_amount) as amount
+	,calc.trans_date as date_fx
+from (
+	select isnull(ech.date_fx,base.trans_date) as trans_date
+		,isnull(round(ech.pourcentage*sum(base.cur_amount)/100,2),sum(base.cur_amount)) as cur_amount
+	from (
+		select h.client,h.voucher_date as trans_date
+		,case when h.description = 'Frais de scolarité' or h.description like 'Frais paiement en %' or h.description like 'Frais de paiement en %' or h.description like  'BRS%' or h.description like 'RRR%' then 1 else 0 end as assiette
+		,h.cur_amount
+		,max(t.fee_group_id) over (partition by h.client,hh.apar_id,isnull(cast(t.invoice_no as varchar),cast(hh.invoice_no as varchar))) as fee_group_id
+		,cast(2000+h.fiscal_year/100 as varchar)+'-'+cast(2000+h.fiscal_year%100 as varchar) programoff_id
+		from $?st_det_table h
+		inner join $?st_head_table hh on hh.invhead_pk=h.invhead_fk
+		left outer join aeminvtrans t on t.client=h.client and t.inv_base_pk=h.inv_base_fk and hh.apar_id=t.apar_id
+		where h.invhead_fk=$!txtInvheadPk
+	) base
+	left outer join afxecheancier ech on ech.client=base.client and ech.annee=base.programoff_id and ech.dim_value=base.fee_group_id and base.assiette!=0
+	group by base.client
+		,isnull(ech.date_fx,base.trans_date)
+		,ech.pourcentage
+	union all
+	select hh.invoice_date as trans_date,sum(cu.cur_amount) as cur_amount
+	from  $?st_head_table hh
+	inner join (select distinct left(fiscal_year,2)+'-'+right(fiscal_year,2) as fiscal_year,invhead_fk from $?st_det_table) h on h.invhead_fk=hh.invhead_pk
+	inner join acutrans cu on hh.apar_id=cu.apar_id and cu.account in ( '41911000','41100000') and cu.description like '%'+h.fiscal_year and cu.voucher_no!=cast(hh.invoice_no as int)
+	where hh.invhead_pk=$!txtInvheadPk
+	group by hh.invoice_date
+) calc
+group by calc.trans_date
+order by calc.trans_date

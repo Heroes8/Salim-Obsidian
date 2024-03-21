@@ -1,0 +1,34 @@
+temps long - bloqué sur 1 personne qui gère tout l'ERP, Didier >> Sébastien Gilles
+automatisation de facturation
+rendre la compta indépendante du soutien de l'ERP
+
+1er jet d'automatisation
+Travail en juin sur une facture pro forma
+Rédaction de spec fonctionnelle, avec des devs
+Il faut faire le rapport pro forma. (prise en main de l'édition, rapport)
+
+Formalisation le processus de facturation
+Résilience humaine
+Accès à l'environnement de dev test
+facture contest avec l'équipe compta : tester les cas de figure de facturation
+remonter les problèmes à régler durant le mois de juillet
+
+technique et fonctionnel
+
+à partir de septembre, avoir un workbook, avec des processus opérationnels pour résoudre des cas
+
+réintégrer des requêtes, faire un fichier excel qui permet d'avoir un dashboard,
+avoir des boutons pour automatiser quelques mises à jour de préparation de facturation
+10-12 jours en juin
+10-12 jours en juillet
+fin du mois d'août : période de facturation
+
+à partir d'octobre : reprendre 70 000 lignes des banques pour le monter en compta (paiement CB)
+extraction API pour récupérer dans un fichier Excel
+Identification de versement,
+Identification de CB, (= clairement fléché)
+identifier accompte versement des étudiants
+
+automatiser leur saisie
+
+sage 500

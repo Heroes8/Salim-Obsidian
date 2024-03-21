@@ -1,0 +1,432 @@
+Sébastien GIL : responsable fonctionnel SI chez EFREI Paris depuis 5 ans, l'éditeur Unit4 pendant 10 ans, mise en place de la solution. Ecole de Commerce, mise au SQL, maîtrise du modèle de données et du process.
+
+Compréhension du processus facturation, du modèle de données
+Faire des éditions
+
+Sur les différents projets, on travaille avec Didier sur la refonte facturation, notamment sur des points techniques. Travail sur les contrats des intervenants.
+
+Sur le contexte : domaine d'expertise
+
+Besoin de tableaux de bord pour détecter les anomalies
+Fluidifier les facturations
+
+Réalisation des éditions de factures par batch, avec mise en place de la gestion des anomalies. Sentiment d'autonomie et de responsabilisation car ce sont leurs facturations
+
+Fort volume de données, et davantage de programmes d'étudiants
+ERP touche tous les sujets, type admission.
+Industrialisation.
+
+-------------------
+
+2 moteurs de génération d'état, sur l'ancienne version
+Nouveau moteur d'édition
+Report Engine : avec une nouvelle version
+
+-------------------
+
+Faire un 360° sur la facturation
+CDDu faire un point, travailler sur la requête, l'intégrer et la tester.
+>> il manque encore le tableau
+>> @ASR : regarder commentaire des tableaux
+
+--------------------
+
+refresh de facturation
+
+Depuis de l'accompte, réintégrer, avec l'Excelerator.
+Formaliser les principales étapes, les principaux points.
+Mettre en place une VM pour l'Excelerator
+
+-----------------
+
+Il y a une checklist sur les étapes avant facturation
+
+* paramétrage EFREI sur les différents programmes
+* vérification de l'intégration dans SAGE 
+* création des fiches clients : pour les nouveaux entrants dans SAGE (la compta est autonome) : vérification de génération d'écriture vers des tiers qui existent bel et bien.
+
+* saisie des bourses
+** bourses par admissuin
+** bourses Human'IT pour les personnes déjà précédentes.
+
+-----------------
+
+consultation bourses nouveaux entrants
+: elles sont indiquées sur la fiche étudiant (dans l'onglet import)
+posées sur la fiche candidat
+on distingue Etape : NVL.entrant
+Il y a un tableau fait pour lister toutes les bourses
+(type de bourse : CPGE / Excellence)
+Montant enregistré : vérification si 
+
+IVANOV : 500 en excellence
+1000 en CPGE :
+
+on lui a pas saisie la bourses pour GBAGUIDI
+
+certains resaisissent après
+
+la compta doit vérifier aussi
+
+permet de vérifier la fiche étudiant (bourse 500€, attribuer le type de frais)
+
+Outils / Finances / Saisie manuelle de facture
+
+décrit dans la documentation, permet de retirer une ligne de frais, une bourse avec un montant négatif
+
+fait à la main.
+
+comme les montants sont 500 / 1000 ou 1500, on sélectionne et on fait la manip
+
+Ils ont la doc en compta pour le faire, il faut regarder régulièrement, (-notammen t aavant chaque facturation), car intégration au compte de l'eau
+
+
+-500 à saisir sansm ontant enregistré GBAGUIDI : anomalie
+
+human'IT : via fichier Excel : 1 seul fichier à traiter à un instant T, l'étudiant existe déjà car c'est un étudiant existant
+
+La human'IT : pas besoin d'automatiser,
+
+la bourse saisie doit être indiquée par BBD ou RRR = remise cf. documentation
+Il y a un libellé de bourse à spécifier
+Il arfive avec un libellé, puis il faut spécifier un autre libellé en fonction du type de bourse
+
+une dizaine de minutes par an.
+n'esst pas nécessaire d'automatiser 
+
+* Intégration des accomptes (fait le matin)
+Excelrator avec de l'Intellegent.
+Intégration des accomptes : Rentrée / acomptes / SGL - import
+
+SGL - Import des acomptes depuis 2020-2021
+mis en place par Samuel Ballé
+
+lié à la facturation et comptable (consultant finance)
+
+Mis en vert : ce que SGIL a compris
+
+explication des process
+
+Acomptes dans Sage
+Myreport les rend accessible à 4h du matin
+Excelerator charge et comparer pour vérifier si comptable
+
+Règle de gestion page 7 avec les préfixes (?)
+
+sur le serveur, utilisation des vues
+
+1.1 (p.12) Process EM05 => GL07 génération des intégration des écritures compâbles (lecture des données dans une table, vérification des incohérence (fiches tiers inexistantes) vidage de la table
+
+Difficulté d'Excelerator : 
+Quelques paramètres (p13)
+
+version avant ouverture de la période comptable
+version après ouverture de la période comptable
+cf. 2018 - 2019 => changement de période comptable et de la date de comptabilisation
+
+Didier a demandé à Angelo si 20-21
+à vérifier avant de rentrer les accomptes
+
+(pas de rollback une fois que c'est envoyé)
+
+génération du fichier, envoi à pierre pour validation, avant d'intégrer réellement.
+
+c'est stabilisé, mais ça change dès qu'on a changé de période comptable
+
+quand on change de période comptable, il faut intégrer les écritures.
+
+Excelerator : c'est une macro qui se rajoute : connexion avec un identifiant système
+>> Didier n'a pas encore testé
+
+cliquer sur charger : réactualise toutes les feuilles
+liste des écarts (p14)
+
+cf montant Sage et montant Agresso = OK
+
+les 4 encadrés en rouge, quand lancement des intégration, ajout dans unit4
+
+** aller sur l'envoi agresso, comptabilisation feuille en cours, envoi les écritures comptables et lance un GL07
+
+le process TPS : traite les écritures comptables toutes les 5 minutes
+
+Il faut vérifier que le TPS a fini avant d'injecter
+** DEUX FOIS LES MEMES ECRITURES (danger !!)
+
+si libellé compta lorsque identification des écritures
+il faut que la compta fasse bien son taff intégré dans sage pour que ça soit récupéré.
+
+Les données de myreport sont mis à jour 1 fois par jour,
+
+si on reclique sur importer : OK
+
+base agr_compte_etudiant : dans le process, il compare la BDD unit4 et la base myreport ?
+
+Pierre doit maintenir myreport ou alors il faut trouver une autre branche
+
+>> Si on veut l'excelerator, il faut continuer de maintenir le MyReport
+
+p16 : sur les libellés
+INSCRIPTION, SCOLA, INSC + SCO, SEMINAIRE, INSC, INSCRI
+(libellé compta sage ? ou libellés dans unit4)
+avant 1 seul compte comptable
+SGIL a créé des comptes différents
+
+Onglet control, onglet détail, etc...
+
+Myreport est une vue issue de sage
+>> DME envoie à Pierre une validation sur le maintien de MyReport
+
+Etape 4 ! Vérification des accompte
+incohérence
+: formation initiale avec frais alternance
+etc...
+déjà listés avec DME
+
+} ce qui va être automatisé dans Excel
+scanner les requêtes qui passent, ouvrir le tableau : récupérer la requête, mettre les résultats dans un onglet spécifique dans Excel
+
+Tout ce qui est OK : on n'y touche pas
+Tout ce qui n'est pas OK : envoie pour faire correction dans Unit4
+
+Production d'une liste d'étudiants apèrs les chekcs automatique, avec cette notion "facture vérifiée"
+
+** Etape 5 : tout le monde est dans NF quand ils ne sont pas encore facturés
+
+Un étudiant a un objectif : inscription dans une année académqieu
+en fonction du champ session : cf AALIANDELLA : L2-International
+Il y a des données qui permettent de gérer les lignes facturables
+- onglet 10- Finance : 
+l'idée : NF = non facturés
+par défaut, tout le monde est dans la session NF, personne n'est généré avant de mettre les remises et tout...
+
+On associe le groupe de frais, le groupe de frais = échéancier : 
+
+pour le paiement des frais d'inscription : 1500 à la rentrée 1500 pour les CPGE,  pour les programmes expert...
+
+soit paye au comptant
+soit en 2 fois : paiement de frais d'échéancier
+soit en 10 fois : 
+
+il paie en 10 fois AALI ANDELLA MOHAMED
+NF => FAC-RENTREE : 
+4- Session : ce qui change, c'est les groupes de frais : génération de 10 échéances
+en 2 fois
+frais d'inscription
+frais de scolarité
+
+les écritures lorsqu'elles sont passées de NF à FAC, génère toutes les lignes facturables dans FINANCE
+
+il prend toutes les étudiants, vérifiés, depuis consultation Obj. pédagoqieu , regarde tous les L2-INT, tous ceux en NF, tout sélectionner
+Traitement en masse : Mise à jour en masse d'objectif pédagique : tout le monde passe en NF
+
+Les lignes sont en statut A = le montant des frais facturabnle a été généré 
+B = la facture a été édité , cf n° facture dans N°piece
+
+identifiant de la ligne de détail
+
+INSCRIPTION : 1500€
+Frais de scolarité : en 10 fois
+30€* 10 = 300 €
+
+avec une BRS HUMAN'IT : siaisie directement en manuelle
+
+Etat C = quand il y a un avoir total, contrepassation de l'écriture précédente,
+il a réussi a faire le lien entre la facture initiale et l'avoir total
+
+les lignes en statut A sont dans le prochain lot, de facturation
+
+si facturation de cet étudiant : ces deux lignes en facturation
+
+si on génère un avoir total : repasser en NF
+
+EM01 :
+Etats disponibles
+
+EM01 : processus de calcul en fonction de l'onglet session, il doit tourner pour générer ces lignes là
+(il faudra qu'il redémarre les services)
+EM01 : prend toutes les lignes, créé les lignes en statut A : rajout de 22 lignes
+facturation, passées en B
+et les existantes passées en C
+
+Si en NF : toutes ces lignes ne sont pas apparues, 
+
+si lancement de facture manuelle
+
+ne pas déclencher de facturation avant d'avoir vérifié les bourses (etape 2)
+
+dans l'étape 5 NF => FAC-RENTREE, toutes les lignes en A
+donc y a la bourses et avec frais
+
+il faut vérifier si dans le lot traité, il y a les gens avec une bourse
+
+dans la compta : saisie d'une facture manuelle, siasie de bourse : Finances / saisie manuelle de facture
+
+Type Bourse
+* = même valeur
+BOURSE-EFREI, BOURSE HUMAN'IT
+changement de l'écheance, saisie d'une bourse de 700 inverse pour l'annuler
+
+et la compta ne veut pas faire apparaître cette facture chez les étudiants : visible = NON
+faire un avoir qui n'esst jamais adressé à l'étudiant
+c'est un avoir de saisie, un avoir de manip
+
+faire 700 générer une ligne en manuel
+
+ajout de la ligne 2 : ligne manuelle en A
+
+process = vérification session, groupe de frais, génération
+
+si édition de facture : génération d'une bourse à 700, pas de n0 de pièce (facture) pas de journal, pas de numéro de ligne de détail
+
+Etape 6 : au lieu de passer sur chaque objectif pédagoqie upour cocher la case fac-rentrée : fourniture d'un fichier EXCEL avec un traitement, cf : étape 6
+
+Etape 6 : pour faciliter la sélection et la validation
+au lieu d'ouvrir chaque objectif pédagoique, et aller dans IRF, et passer dans
+
+* Détail des bourses : (en 1ère année injectée)
+
+La compta doit cocher : facturation vérifiée pour que le process automatique de facturation le fasse à la rentrée.
+
+Finance / facturation (EM05) : manuelle, même si case facturation auto n'est pas cochée
+
+si on fait un check avant, tout automatiser pour l'édition de nuit, et cela leur permettra de débrayer
+
+si plus de facturation manuelle, il faudra enlever les droits à EM05
+
+Onglets jusqu'à 10 : onglet standards
+
+11/12/13/14 : enrichissement des données
+pas de process standard sur les tables perso EFREI
+
+fourniture du fichier, cocher toutes les cases à facturer
+
+IntelAgent = standard de Unit4 pour déclencher des actions suite à un élmt déclencherur
+
+InterlAgent : partie inaccessible aux utilisateur (engrenage) // S = P (pending)
+
+FACT.AUTO en pause, sauf quand on souhaite facturer
+
+FActuration des lots par étudiants
+FlexiFit (FF)
+
+maintenant, plus qu'une seule case
+requête SQL sur les éléments déclencheur : Entrée
+
+top 1 pour vérifier si la facture sort bien, essaie de facturation lors des premiers déclenchements, puis lancvement par lot de 200 (SELECT DISTINCT top 200)
+
+affichage pour vérifier incohérence : -700€ (bourse) sans les frais
+
+aeminvtrans = table finance, ce sont les éléments envoyés dans la facturation (onglet 10- FInance)
+aemepisode = objectif pédagogique
+
+aemstudent : étudiant
+
+
+jointure pour adresse postale en france et celle sur adresse hors france (car affranchissement différent)
+
+
+t4.invoice n0 = pas encore facturé, facture inactive
+pas de rentrée décalée
+table d'exclusion si élément bloquand car pas d'intégration accomptespécifique : numéro étudiant spécifique
+gestion d'une table spécifique avec explication du blocage
+t1 checked : facturation vérifiée
+
+existats : table des écritures comptables : vérifier si pas eu déjà un accompte envoyé pour vérifier si pas déjà facturé : cas des LI-INT facturé, mais faire un L1 classique en fait,
+vérifier si accompte déjà intégré
+
+la prochaine facture inclus bien l'accompte
+en fonction des cas avec pierre, modification des requête
+
+valider avec Pierre si dès que case factu auto : même si finalisé mais pas encore inscrit, ou extraire NON VENU (inscrit en L1 qui dit qu'il venait, mais qu'il n'est pas venu)
+démissionnaire
+voir règle avec Pierre.
+
+une fois les lignes repérées, réalisation du traitement de comptabilisation (cf. 3- Sortie)
+
+génération d'un process par facture, 1 seul EM05 => 1 seul GL07
+
+200 EM05 (édition de facturation) => 200 GL07 (génération des éditions comptables)
+
+cas de gestion : étudiant démissionnaire : clôture de la fiche pédagogique, génération des écritures comptables (du lot d'intégration, si la fiche tiers n'existe pas, le lot est bloqué)
+
+il y a différentes files serveur : ça peut mettre en attente d'autres files,
+
+saisie de note pour calcul de moyenne
+
+peut bloquer, il est possible d'affecter une file d'attente serveur dédiée (file EMS) qqsoit l'attente, elle ne bloque pas le DEFAULT
+
+Cela génère les 200 EM05 : génération des factures sur l'imprimantes, puis archivage auto des factures sru la fiche étudiant : 
+
+Outils / Etudiant, on peut retrouver la facture sur l'espace documentaire étudiant, accessible uniquement via EFREI Stat ou Unit4, (archie document) : cf. factures
+facture 137511 : 
+numéro de l'étudiant, nu°¨de facture, récupération lié au programme
+adresse du financeur = adresse de facturation
+retrouver les différentes lignes : frais d'inscription, paimeent en 10 fois, échéancier
+frais manuel : ceretificat voltaire (sur les cours, n'existe plus)
+accompte : avance 
+
+en septembre : certificat voltaire et frais d'inscription
+ tout le reste est en échéancier au 10 septembre
+ 
+ la première ligne 110 : lié au certificat voltaire
+ 
+en fonction des modes de règlement : virement, chèque, prélèvement autmatique
+
+** virement : uniquement en 1 fois
+
+facutre émise, génération des écritures comptables 
+une fois que le TPS a tourné : export des écritures comptables d'intégration
+fichier plat produit 
+EFREI / Finaance / Factuires / Facture export Sage
+
+génération d'un résultat avec le bouton (à côté de Sigma) Export_sage : génération du fichier qui va pouvoir être intégré dans Sage.
+
+Ce fichier Excel correspond à ce qui va être intégré de l'autre côté, avec le schéma des écritures
+Vérification avec SARAH si il y a modification des n° de compte, avec l'Excelerator : compta géné, les analytics, le mode de règlement, injection de 38 lignes pour u n seul étudiant = 38 écritures comptables
+gross volumétrie
+
+Contrôle Etape 8 : si cloture fiche étudiant et ça bloque
+Education / finances /. facturation Maintenace Interface lot :
+il y en a 1, 1 écriture bloquée
+
+lignes d'erreur : E1 ?
+un lot a été lancé ily a longtemps, on peut relancer le lot de facturation 
+facturation EM05 : on retrouve le lot bloqué
+
+sur le Log : GL07 : identification de la source de l'erreur
+EXTRAIT INTERFACE = OK
+ERREUR INTERFACE, il y a une explication de ce qui n'a pas marché, afficher compte-rendu (erreur sql)
+souvent, c'est parce que axe Analytics
+ANA2, ANA7 : fiche de l'étudiant
+si il est clos, Ana7 :
+
+Etape 9 : gestion des avoirs
+
+faire des lots de tests
+
+-----------------
+automatiser les tests
+
+automatiser la vérification de la syntaxe
+vérifier l'ouverture de la fiche étudiant
+vérifier les lots au fur et à mesure
+
+à partir de juillet
+
+Le 6-7 formation : faire un lot complet dans l'environnement preprod côté compta, pour qu'ils aient la main, la seule chose embêtante, critère SQL : il le feront pas
+
+factu vérifiée = factu vérifiée
+
+ajout de la proformat
+ajout de "proforma" vérifié
+vérifier avec l'IntelAgent : touts les jours, toutes les deux heures pour un proforma
+publication du truc automatique tous les quarts d'heure
+
+>> automatisation côté proforma, s'il y a une modifciation à faire, comment sait-on qu'on doit éditer une nouvelle proforma
+
+demain, en environnement de DEV (DME encadre les étudiants)
+
+c'est la version 25 avec les passages surlignés en couleur
+
+faire l'intégration ensemble pour finaliser
+

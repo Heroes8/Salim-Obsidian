@@ -1,0 +1,230 @@
+Génération de rapport sous Access
+
+connexion à distance
+2 environnements
+>> faire un VPN
+
+l'ERP : connexion à distance par un VPN
+Pas besoin de VPN lorsqu'on est sur place
+Rebond avec bureau à distance
+cf ** capture**
+
+svw19met
+pour faire les requête
+permet d'acceder aux différents liens Unit4
+
+Prod
+Preprod = dev pour les factures proformat ; et travail sur les CDDU
+NEW PREPROD : mis à jour plus récent
+** captures : les différents environnements
+Jeremy va les aider pour mettre en place les certificats sur les acces
+
+>> en attente de login UNIT4
+------------------------------------
+** à gauche
+
+E1 EFREI PARIS
+interface d'admin : démo complémentaires non utile
+
+Etoile pour la configuration
+
+Edition
+
+regarder la liste des étudiants
+
+finance/compta / facture et éditer des factures ou requête...
+(didier sur la finance : semaine 20/06)
+
+Travail sur le proformat
+Puis tests d'intégration données réelles
+
+intégrer le tableau de bord de Sarah.
+
+-----------------------
+côté intervenant (cat/cat)
+
+offre = réalité physique (annuelle)
+modèle : classe
+
+F7 pour lister l'ensemble
+la première ligne permet de requêter 2018* => tous les codes 2018*
+------------------------
+** capture visible ou non
+"lorsqu'on fait des régulations, cela génère des factures que les étudiants ne devraient pas voir"
+** résolution de contrôle de la visibilité
+Facture proforma
+Facture (sans proforma)
+Affichage des factures avec un index visible
+
+----------------------------
+prise en compte des inscriptions en décalées
+proforma à partir de la signature qsign de la convention (ils ont payé) => génération de la proforma
+confirmation du versement
+
+toutes les nuits, un lot de facturation automatique
+pouvoir "débrayer" = éviter qu'une personne soit facturée
+la nuit : les lignes "à facturer" (statut A) : facturée la nuit automatiquement, le lendemain matin, les factures sont disponibles en ligne
+on continue de pouvoir faire une facture manuelle, et on peut décocher ce qui doit être visible de l'étudiant.
+
+-----------------
+
+registre fixe : paramètres
+registre fixe : fonctionnalités
+
+attribut : DELIVMOD = mode d'enseignement
+Colonne S
+C = cloturé
+N = acttif (normal)
+T = supprimé (terminated)
+P = pending (en attente)
+
+Commun / Attributs
+fourni par le logiciel
+
+regarder dans les attributs les J0 = étudiant, JF = programme,
+UE02 = Ecole
+
+et les attributs custom
+
+** cpt : attribut ECOLE
+
+** Programme
+
+RESSNO : responsable du programme
+---------------
+paramètre de registre fixes : code pays, codes postaux, langues
+
+
+objectif, naviguer sur les onglets, au niveau d'un cours ou d'un programme
+Objectif pédagogique = matérialisation de l'inscription d'un étudiant dans un programme
+
+4- structure : catalogue de cours
+6- objectif pédagogique
+
+8- inscription sur 1 seul cours
+
+au niveau d'un cours : cours + offre
+
+dans un cours, aller dans dans le cours INT1 = internationaux
+
+lien avec l'ELSM (lien moodle)
+
+1 ou plusieurs prof peuvent faire un cours
+Il y a un nombre d'heure associé à un cours durant la période académérique
+Terme = début et fin scolaire
+
+Sur les contrats, sont des profs (Catalogue>ressource>requête sur l'intervenant)
+clic droit sur l'entête (classement par ordre croissant)
+
+>> regarder la syntaxe environnement microsoft : wildcard etc...
+
+Type ress : pour les CCD Usage
+
+Numéro unique de ressource (ID ressource)
+
+Il y a un CRM qui gère la partie personne (ID contact = ID dans le CRM)
+
+(à droite) : cf: contact
+
+Autre identifiant : ID ressource (prof)
+
+dans le menu du haut : l'espèce de livre : Documents de la ressource
+Avenant, modèle
+Contrat initial 
+
+Entre un prof et ce contrat : il faut passer par des attributions
+ALLIEZ_11_18G040
+
+on v a regarder le 11 (numéro de ressource), sur le terme 2017-2018
+
+catalogue > Contrats intervenants et activités > attribution et contrat
+Attribution des cours par intervenant
+
+-IRV = (majeure) Imagéerie et réalité virtuelle
+
+3,5 heure de TD associé à un contrat
+
+Contrat en C = il a étéédité
+** capt: attribution
+
+cf. Modification conntrat
+21-003-00
+
+"Sans modification des dat"
+
+>> édition avec F12 (N° de commande 2272)
+
+Liste des éditions lancées (4e en partant de la fin)
+
+passage à encours
+passage à signé : F12 pour enregistrer
+signé = non modifié
+
+les deux derniers chiffres 21-003-(00) <= correspond à l'avenant 00, 01, 02...
+
+rajouter une ligne 8 e bouton du menu du haut
+
+I = (pas encore associée à un contrat)
+
+
+cf?. validation des attributions => ajouter sélectionner : associer à un contrat (dans la barre du haut)
+
+Statut C = à faire à la main
+
+lorsque c'est un avenant, 01, 02 : il utilise le modèle d'avenant
+
+
+Prendre en main le reporting sur Access et la génération de rapport : réunion de 8 à 9 pour aller : générer des rapports
+
+
+---------------------------
+tester sur la partie rentrée des soldes 
+tableaux de bord partagés : pas de retour à partir d'export CSV sur Monday [?]
+Développement des API pour pousser l'information (non-prioritaire)
+
+On fait la facture, on fait le proformat (objectif : fin-juin)
+Vérifier que l'accelerator fonctionne bien
+Le mettre sur un environnement distance (accelerator) pour que l'EFREI puisse être autonome pour faire des modifications
+
+ARC : pour faire les rapports (dans l'ancienne version) ; modification à apporter sur du proformat ou sur la facture elle-même
+---------------------------
+>> replanifier les sessions
+>> replanifier le RDV physique à l'EFREI (à partir du 20/06) : mercredi matin
+>> Billing contest (
+
+faire des jeux de tests dans l'environnement de PRE-PROD (new)
+- test de CDDu sur des profs techniques qui font des cours en FR et en anglais
+vérifier ceux qui font que du FR et du UL
+ceux qui font les deux
+ceretains sont sur le campu
+d'autres sur le campus de bdx
+d'autres sur les autres
+
+et les profs de langues, qui font du LV2 (qui n'est pas de l'anglais)
+pour que ça ne sorte pas en anglais
+
+faire des tests combinés pour que cela fonctionne sur le CDDu initial, et faire aussi sur les avenant modification, le 1er, le 2e, etc... pour vérifier qu'il maîtrise bien le delta d'année
+
+}} c'est le jeu de test CDDU, et Avenant modificatif
+
+
+En juillet : dématérialisation (faire des requêtes spécifiques sur les contrats)
+connaître l'état de signature des contrats dématéruialisés, les récupérer pour les insérer dans Unit4 ou en tout cas indiquer que c'est bien signé dans Unit4/.
+
+
+(Docusign) -- voir avec Damien (les écrans) contrats pour signature
+
+
+-------------------
+
+génération de rapport Access
+
+utiliser les accès de Didier sur le serveur de DEV,
+
+environnement ARC (Unit4)
+
+Modèle de l'avenant et modèle technique (pour la mise en forme de l'avenant)
+essayer d'éditer un avenant
+
+il manque une requête volumétrie d'heure globale par matière
+

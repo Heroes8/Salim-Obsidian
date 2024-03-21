@@ -1,0 +1,281 @@
+{
+  "main": {
+    "id": "43c974838ea01b69",
+    "type": "split",
+    "children": [
+      {
+        "id": "1101a7b366b8ed0c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "232f781395cef561",
+            "type": "leaf",
+            "state": {
+              "type": "full-calendar-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "995180156ccf68da",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00 📒Quick note/Formation/Préparation sujet examen DevOps.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7aeaf9c8d14f828c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "04 ⌨️Code/Powerhsell/Create default user Azure AD.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "dd431d91bd0b234a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "04 ⌨️Code/Powerhsell/Get office pack identity.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ea5e4dd4cc546f9d",
+    "type": "split",
+    "children": [
+      {
+        "id": "ffe773354fd4ef63",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "68fc00e92c96f672",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1b8b84ec6eeea6a6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fd3c6c905db037e0",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "29e5262194a5c5fd",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 571.5
+  },
+  "right": {
+    "id": "b640959ac209202c",
+    "type": "split",
+    "children": [
+      {
+        "id": "6ac83fede0d68338",
+        "type": "tabs",
+        "dimension": 46.42375168690958,
+        "children": [
+          {
+            "id": "6bdad8581f798f0b",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "ddf253959d244879",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "04 ⌨️Code/Powerhsell/Create default user Azure AD.md"
+              }
+            }
+          },
+          {
+            "id": "e2956d9b68ba51ad",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "155bcf98f13b2389",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "283309a19ca6fb00",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "04 ⌨️Code/Powerhsell/Create default user Azure AD.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9495e65fe6c59f2e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "04 ⌨️Code/Powerhsell/Create default user Azure AD.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "89e7a24640b08b9e",
+        "type": "tabs",
+        "dimension": 53.576248313090424,
+        "children": [
+          {
+            "id": "89914e10cc42acc7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 📆Calendar/2023-05-09.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 478.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Ouvrir le sélecteur rapide": false,
+      "graph:Ouvrir la vue graphique": false,
+      "canvas:Créer une nouvelle toile": false,
+      "daily-notes:Ouvrir la note quotidienne": false,
+      "templates:Insérer le modèle": false,
+      "command-palette:Ouvrir la palette de commandes": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-full-calendar:Open Full Calendar": false,
+      "obsidian-advanced-slides:Show Slide Preview": false
+    }
+  },
+  "active": "7aeaf9c8d14f828c",
+  "lastOpenFiles": [
+    "04 ⌨️Code/Powerhsell/Get office pack identity.md",
+    "04 ⌨️Code/Powerhsell/Create default user Azure AD.md",
+    "00 📒Quick note/Formation/Préparation sujet examen DevOps.md",
+    "Sans titre 1.canvas",
+    "Sans titre.canvas",
+    "03 💾Documentation/Formation Ansible/[Ansible]Atelier6 - Roles et Galaxy.pdf",
+    "00 📒Quick note/Formation/Préparation formation Ansible.md",
+    "99 🖼️Image/Pasted image 20230615171644.png",
+    "03 💾Documentation/Formation Ansible/Ansible Cours.pdf",
+    "03 💾Documentation/Formation Ansible/newVersion/Ubuntu 20.04/[Ansible]Atelier7-AWX - Installation et Configuration.pdf",
+    "03 💾Documentation/Formation Ansible/newVersion/Ubuntu 20.04/Démo/Correction/Atelier 7/Atelier 7/roles/docker-ubuntu-0/tasks/main.yaml",
+    "03 💾Documentation/Formation Ansible/newVersion/Ubuntu 20.04/Démo/Correction/Atelier 7/Atelier 7/roles/docker-ubuntu-0/tasks",
+    "03 💾Documentation/Formation Ansible/newVersion/Ubuntu 20.04/Démo/Correction/Atelier 7/Atelier 7/roles/docker-ubuntu-0",
+    "03 💾Documentation/Formation Ansible/newVersion/Ubuntu 20.04/Démo/Correction/Atelier 7/Atelier 7/roles/docker-tags-2/tasks/uninstall-docker.yaml",
+    "03 💾Documentation/Formation Ansible/newVersion/Ubuntu 20.04/Démo/Correction/Atelier 7/Atelier 7/roles/docker-tags-2/tasks/repo-debian-like.yaml",
+    "03 💾Documentation/Formation Ansible/newVersion/Ubuntu 20.04/Démo/Correction/Atelier 7/Atelier 7/roles/docker-tags-2/tasks/main.yaml",
+    "03 💾Documentation/Formation Ansible/newVersion/Ubuntu 20.04/Démo/Correction/Atelier 7/Atelier 7/roles/docker-tags-2/tasks/docker-debian-like.yaml",
+    "03 💾Documentation/Formation Ansible/newVersion/Ubuntu 20.04/Démo/Correction/Atelier6/chrony/README.md",
+    "03 💾Documentation/Formation Ansible/newVersion/Ubuntu 20.04/Démo/Correction/Atelier6/ahuffman.sudoers/README.md",
+    "99 🖼️Image/Pasted image 20230613152912.png",
+    "99 🖼️Image/Pasted image 20230613152849.png",
+    "99 🖼️Image/Pasted image 20230613120749.png",
+    "99 🖼️Image/Pasted image 20230613120650.png",
+    "99 🖼️Image/Pasted image 20230613120646.png",
+    "00 📒Quick note/EFREI/Sync ID/Règle d'affectation de groupe EFREI.md",
+    "00 📒Quick note/EFREI/Sync ID/AD AAD - Note synthèse anomalie comptes STUDENT.md",
+    "00 📒Quick note/EFREI/Sync ID/Note a prévoir pour l'atelier Synchro des ID.md",
+    "04 ⌨️Code/Powerhsell/Script efrei.md",
+    "04 ⌨️Code/Powerhsell/LastLogon Stats.md",
+    "04 ⌨️Code/Powerhsell/Install WSL from PS.md",
+    "99 🎨Excalidraw/Arbre de décision - règle de création de compte.md",
+    "99 🎨Excalidraw/Drawing 2023-06-12 14.20.45.excalidraw.md",
+    "99 🎨Excalidraw/Drawing 2023-06-12 14.20.45.excalidraw.png",
+    "99 🎨Excalidraw/Drawing 2023-06-12 14.20.45.excalidraw.svg",
+    "04 ⌨️Code/Powerhsell/OneDrive usage.md",
+    "99 🎨Excalidraw/Arbre de décision cycle de vie des comptes étudiant.md",
+    "00 📒Quick note/Formation/Prep atelier script.md",
+    "00 📒Quick note/EFREI/Sync ID/Requete Sebastien GIL.md",
+    "00 📒Quick note/EFREI/Sync ID/Unit4 - Note synthèse anomalie comptes STUDENT.md",
+    "00 📒Quick note/EFREI/Sync ID/State à déterminer.md",
+    "00 📒Quick note/Perso/2SearchFor.md",
+    "00 📒Quick note/Perso/Message SeLoger.md",
+    "00 📒Quick note/Perso/ZZZ_Perso.md",
+    "00 📒Quick note/Vite fait/CR réu philippe VOLLE.md",
+    "00 📒Quick note/Vite fait/Note entretien Sebastien GIL sur les comptes sortant.md",
+    "00 📒Quick note/salim.md",
+    "99 🎨Excalidraw/Arbre de décision cycle de vie des comptes étudiant.png",
+    "99 🎨Excalidraw/Arbre de décision - règle de création de compte.png"
+  ]
+}

@@ -1,0 +1,85 @@
+0819 vérifications à automatiser sur les notes de frais
+
+prérequis avant la facturation : import des clients dans sage
+
+1** Editions / Export Clients (l'un des trucs) : envoi l'IBAN / le RIB export dans Sage
+- mise à jour des fiches clients par rapport aux informations saisies
+- export des écritures
+} géré par Sarah
+
+sélection d'une fiche client pour vérifier si ça met à jour le RIB et l'IBAN
+vérification d'un nouvel entrant qui n'existait pas encore dans la base Sage
+
+2** saisie des bourses et des différentes remises
+
+** vérification des adresses identiques = financeur commun
+
+** dans un champ admission : export depuis MyEFREI admission, retrouver la colonne
+
+** intégration des acomptes (DME : Pierre est favorable à faire des intégrations non stop)
+
+lancement du fichier acompte et transmission du fichier de contrôle
+attendre le GO de Pierre (envoyer le fichier de contrôle)
+
+----------
+
+réinscription OP = on va facturer tous les L1 => passage en FAC-RENTREE
+vérification de l'écran de contrôle SGL Passage de NF à fact-rentrée 2020-2021
+
+TEST grp frais
+TEST MR
+TEST ...
+
+le passage de SGL à fact-rentrée = "•	Réinscription OP : Session de fin à NF au lieu de FAC-RENTREE"
+
+** lire les propriétés
+
+s'il faut lancer un lot de facturation, tous ceux qui génèrent un problème : exclusion_facturation
+
+** les apprentis ne sont pas en FAC-RENTREE car ils ne sont pas facturés dans unit4
+
+** dans sa réinscription Grp frais étudiant = saisie formulaire étudiant, grp frais formulaire WEB = corrigé peut être par l'étudiant
+modification faite par la Scolarité
+l'endroit le plus important : "Grp frais OP - onglet session +"
+--- rouge en colonne TEST grp frais = en rouge
+
+** TEST MR : PR mais sans IBAN ou de BIC SWIFT = not OK
+mais en CFA : pas de frais
+le rouge n'est pas forcément un indicateur qui ne fonctionne pas
+
+Alternance <=/=> L1 n'est pas possible
+
+------ 
+
+Session = NF
+sélection des étudiants FI qui sont en NF : 
+
+Edition tout sélectionner
+Traitement en masse
+Mise à jour en masse d'objectif pédagogique
+= il faut le faire programme par programme
+** L1, puis les L1-IN puis etc...
+
+** Etape : redoublement semestriel, mais en grp de frais normal ! = il va être facturé toute l'année
+
+•	GO pour Remises fratrie, enfant salarié…
+: validée par Pierre
+
+-D : rentrées décalées facturés en mars 
+ex : un L1 en rentrée décalée, mais passage en L2 : sans changement de groupe de frais
+
+----
+
+la scolarité sait modifier les groupes de frais
+le groupe étudiant = c'est la scolarité
+
+>> passage en check 22-23 changement du nom du browser
+
+AG16 : dans le processus de réinscription, à chaque fois qu'un étudiant met à jour son adresse de facturation, cela modifie le Flexifield mais pas l'adresse directement.
+
+===============
+
+avec excelerator : requête via des browser, ou mettre directement du SQL dedans, notamment pour les mises à jour
+
+>> Excelerator permet-il de faire de la mise à jour de données
+oui, avec requête SQL, connexion active vers la base de données

@@ -1,0 +1,13 @@
+0728 
+
+introduire la base de données SQL
+3e modèle : facture de régulation
+étendre la requête existante pour aller chercher un bout de reequête sur l'élément de facture,
+aem episode =
+frais d'inscription du programme, vérifier sir l'étudiant a bien versé l'accompte, alors on intègre les frais d'inscription dans la proformat
+=> V2 de la Proforma
+
+
+proforma avec accompte
+
+2 ou 3 projets spécifiques, réaliser côté facturation

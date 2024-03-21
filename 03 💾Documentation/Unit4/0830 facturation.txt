@@ -1,0 +1,81 @@
+à partir de la liste des inscrits
+utilisation de la vue produite par Sébastien, vérifier groupe de frais, inscription, traiter tous les L1, puis tous les L2
+L3
+
+M1 et M2 (pas encore les jurys de passage)
+
+L1, L2, 
+
+>> reste à faire : L3, L3-new,
+
+
+certains M1, M2 = 
+
+les M1 de l'année dernière pour passage en M2 ont les jurys le 15 septembre.
+Leur réinscription sera faite plus tard.
+Volume : 500 à 600 étudiants non facturables.
+
+
+Il y a certains M1 dont le dossier est prêt.
+On pourrait les faire remonter pour vérifier la tarification : 6800, 7800, 8100..
+>> 1 de chacune des cohortes doit être remonté. La bourse tombe lorsqu'il fait le recalcul.
+Frais d'inscription, frais de scolarité, bourse dans le cumul où l'on vient additionner
+Calcul de revérification, remise fratrie, remise exceptionnelle...
+
+Si on teste 1 L1 au niveau des groupes de frais, de la ventilation.
+
+>> vérification des groupes de frais
+tarification OK
+échéancier OK
+
+objectif pédagogique : il existe des distortions, on lance tous les L1
+
+même exercice sur les L2.
+
+
+>> vérification à faire sur L3 et L3-new
+
+>> sortir un suivi fact complet, tous les fact-rentree :
+-faire la comptabilité
+-affectation de l'acompte
+-fac-rentrée + acompte = facturable
+
+-acompte mais pas fac-rentrée : finalisation pas faite.
+-fac-rentrée mais sans acompte : acompte non identifié ; on les aura demain
+
+== vérification des documents après coup si pas d'inscription ==
+
+>> édition d'un PDF avec toutes les factures
+Fac-complet : toutes les factures éditées
+il manque la vérification de dépot des documents sur l'espace étudiant.
+
+cadrage du Ca : vérification de la chronologie et vérification de l'incrémentation, et de la compta.
+(pas de trou)
+
+>> ce dont il a besoin pour le cadrage du CA :
+** numéro de tiers, numéro de facture, montant
+** cumul sorti par étudiant pour vérifier si même nombre de facture et nombre d'écritures
+
+--------
+
+besoin d'un suivi spécifique
+
+*un étudiant a été facturé
+*un étudiant a reçu un avoir
+*on veut qu'il ne voit pas la précédente facture
+>> comment le vérifier en masse sur les étudiants ?
+
+** conservation des factures 5 ans sur Agresso
+
+-------------
+
+il y a le cas de l'adresse avec des problèmes, la vérification se faisait à la mise en pli.
+désormais, la vérification de la maquette/du document "facture" n'est plus fait.
+produire un PDF avec toutes les factures pourrait être produire pour faire le contrôle.
+
+Maroc et Liban : besoin de proforma
+(pour éviter les fuites de capitaux)
+
+
+en cas de prélèvement au 10, mais avec dossier non finalisé
+** décaler le prélèvement, ou lancer le prélèvement

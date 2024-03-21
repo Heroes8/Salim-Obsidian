@@ -1,0 +1,34 @@
+select base.*
+,sum(amount) over (partition by client,apar_id) as total_amount
+from
+(SELECT t1.client, t1.apar_id, t1.invoice_no, t1.invoice_date, t1.student_pk, t1.student_no, t1.student_name,
+	t1.invhead_pk, t2.description, t2.parent_fk, t2.fee_type_id, t2.amount, t2.dim_1, t3.sort_order, t2.cust_currency,
+	t2.cust_cur_amount, t2.cust_vat_cur_amount
+	,case when t2.amount<0 then 'Déductions' else 'Facturation' end as invoicing_section
+	,case when t2.amount<0 then 2 else 1 end as sort_order_section
+	FROM  $?st_head_table AS t1
+	INNER JOIN $?st_det_table AS t2 ON t2.invhead_fk = t1.invhead_pk AND t2.client = t1.client
+	INNER JOIN aemfeetype AS t3 ON t3.fee_type_id = t2.fee_type_id
+	union all
+	select cu.client,cu.apar_id,cycles.invoice_no,cycles.invoice_date,cycles.student_pk, cycles.student_no, cycles.student_name,
+			cycles.invhead_pk,'Acomptes versés' as description,cycles.parent_fk, cycles.fee_type_id,sum(amount) as amount,
+			cycles.dim_1, cycles.sort_order, cycles.cust_currency,
+			sum(amount) as cust_cur_amount, 0 as cust_vat_cur_amount1
+			,'Avances' as invoicing_section, 3 as sort_order_section
+	from acutrans cu
+	inner join
+		(select h.client,h.apar_id,min(h.invoice_no) as invoice_no,min(h.invoice_date) as invoice_date,min(h.student_pk) as student_pk, min(h.student_no) as student_no
+                    , min(h.student_name) as student_name, min(h.invhead_pk) as invhead_pk,min(d.parent_fk) as parent_fk, 'ACOMPTES' as fee_type_id, min(d.dim_1) as dim_1
+                    , 1000 as sort_order, min(d.cust_currency) as cust_currency
+                    ,' '+cast(d.fiscal_year / 100 as varchar)+'-'+cast(d.fiscal_year % 100 as varchar) as cycle
+		FROM  $?st_head_table AS h
+		inner join $?st_det_table d ON d.invhead_fk = h.invhead_pk AND d.client = h.client
+		group by h.client,h.apar_id,d.fiscal_year
+		) cycles
+	on cycles.client=cu.client and cycles.apar_id=cu.apar_id and cu.account in ('41911000','41100000') and cu.description like '%'+cycles.cycle and cu.voucher_no!=cast(cycles.invoice_no as int)
+	group by cu.client,cu.apar_id,cycles.invoice_no,cycles.invoice_date,cycles.student_pk, cycles.student_no, cycles.student_name,
+			cycles.invhead_pk,cycles.parent_fk, cycles.fee_type_id,
+			cycles.dim_1, cycles.sort_order, cycles.cust_currency
+	having sum(amount)!=0
+) base
+ORDER BY apar_id, sort_order_section,sort_order, description

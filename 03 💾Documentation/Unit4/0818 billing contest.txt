@@ -1,0 +1,131 @@
+billing facture 
+
+** par les droits d'accès vers MyReport, géré par Marc (login motdepasse)
+
+ODJ :
+Pierre VIVAREZ 
+Angelo LAPLACE
+
+Il existe un environnement de PREPROD pour faire les tests de facturation
+La cible est à début juillet
+
+----------
+
+Pierre et Angelo on ressorti la base 419111
+Nettoyage sur Excel a été fait par Pierre
+En cours dans la compta
+
+Il y a 1800 qui auront un code de tiers
+
+Avec Sarah : validation des factures et des proforma.
+- aucune facture n'est visible avant le 25/08/2022
+Contournement sur la propriété du document pour les factures manuelles : le faire depuis l'interface de facturation
+
+-----------
+
+Pierre : quand le candidat s'inscrit, il n'a que la dernière à jour qui est visible : c'est OK
+
+Test à faire sur les rentrées décalées car non présent dans le sprint de Damien
+
+> Par rapport aux proforma : a-t-il une vue de ce qu'il a payé ?
+
+proforma
+facture
+- error, isvisible = non
+nouvelle facture
+
+===========
+
+Pierre :
+l'étudiant s'inscrit en L1
+Il voit sa proforma
+La facture sort en L1
+On bascule en L1-R
+
+? Y a-t-il une nouvelle proforma générée en L1-R qui matérialise les 500€ de différence
+
+============
+
+Pierre :
+Scolarité L1 et APP=programme apprenti
+La scolarité peut-il le vérifier ?
+Un APP doit avoir des modules de paiement
+** Un APP avec groupe de frais 10X : est impossible
+
+Il y a des programmes facturables et des programmes non-facturables
+Peut-on bloquer la validation du profil
+
+EN janvier février, des étudiants en APP vont basculer en facturation,
+Pour ces 50-60-100 étudiants, il faut le faire manuellement.
+Un APP ne devrait pas avoir de frais de facturations.
+
+DME : dans ce cas, on fait une saisie manuelle dans Agresso
+>> à tester : un apprenti, vérifier que la facturation peut être faite de façon cohérente, en janvier, qui aurait l'intégralité des frais de scolarité à payer (saisie manuelle)
+
+en février : les échéances : mars, avril, mai, juin // 1 ou 4 échéances
+Mais si il trouve 2 mois après avoir,
+Il paie les 2 premiers, puis il repart en APP => il faut générer un avoir
+(=> facture complémentaire)
+
+schéma d'écriture
+facture
+facture complément 419110 neutralisé, remonté en 411 puis matérialiser les 300 pour les mettre en 708 pour le mettre en autre frais
+ça neutralise l'écriture 419 qui doit être égal à 0 en fin d'année
+
+================
+
+compensation dans la compta
+mais illisible pour l'étudiant
+cf. facture complémentaire
+
+correction 22-22 => 22-23
+remplacement référence <-> numéro d'étudiant
+Il y a dû y avoir des corrections
+
+scola sans inscr
+
+==================
+
+passage de 2x à 10x : on faisait bien la facture complémentaire
+mais l'échéancier ne peut plus être ressorti
+
+et c'est l'étudiant qui faisait le règlement
+
+Sarah a accepté de le faire pour faire le prélèvement du bon montant
+
+=============
+
+avoir de 60€ : 6 lignes
+30 
+30 pour annuler en 411
+
+60 708500 G
+60 708500 A
+
+Les factures complémentaires ne sont plus liées.
+Mais les éditions ne sont pas bonnes : avoir de la facture complète et intégration d'une ligne complémentaire
+
+FR-ACCES-FAC
+L'échéance ne descend pas en saisie manuelle de facture, mais ça peut bloquer
+
+>> il manque une édition de suivi des versements
+>> sortie d'une facture "acquitté" avec le tampon "acquitté"
+
+===========
+
+>> préparer un book pour Excelerator pour Pierre
+
+
+automatiser le contrôle des acomptes, on peut monter un tableau de bord pour les acomptes
+correction uniquement dans le suivi de facturation totale
+
+vérifier dans la facturation
+** peut on alimenter Suivi Facture COMPLET, chaque fois que les factures remontées : c'est le dernier état dans AGRESSO
+
+= 2022-2023
+
+Export sous Excel
+
+Exporter sans les totaux
+
+mercredi matin, Angelo finit les modifications sur le 419

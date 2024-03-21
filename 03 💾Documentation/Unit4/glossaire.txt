@@ -1,0 +1,9 @@
+? CP = Classe Préparatoire 
+FC = Formation Continue
+FISE = Formation Initiale sous Statut Etudiant
+FISA = Formation Initiale sous Statut Apprenti
+
+Infra EFREI :
+La maintenance et l’évolution des applications web métiers (SPA) développées en interne : intranet, extranet, portail, CRM, applications web/mobiles…
+La conception et le développement de nouveaux projets clés répondant à un besoin métier en constante évolution.
+Interfacer les applications et services développés en interne avec notre ERP Unit4, notre LMS Moodle et notre CMS WordPress ou avec d’autres solutions tierces.
